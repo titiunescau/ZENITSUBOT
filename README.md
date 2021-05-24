@@ -20,9 +20,9 @@ Comandos pra instalar:
 
 * `pkg install nodejs `
 
-* `git clone https://github.com/titiunescau/Nezukobot.git `
+* `git clone https://github.com/titiunescau/ZENITSUBOT.git `
 
-* `cd Nezukobot `
+* `cd ZENITSUBOT `
 
 * `bash install.sh `
 
@@ -42,7 +42,7 @@ Comandos pra instalar:
 
 ## Comandos para ligar o bot novamente
 
-* `cd Nezukobot`
+* `cd ZENITSUBOT`
 
 * `git pull `
 
