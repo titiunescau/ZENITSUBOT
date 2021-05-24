@@ -15,6 +15,6 @@ _wa.me/559887053394 ou digite *${prefix}owner*_
 *NOTA*
 
 *GRUPO DO Nescau 🐊🚩 :*
-_https://chat.whatsapp.com/BWm8puxoM0fi9yEoHgqr_ `
+_https://chat.whatsapp.com/BWFm8puexoM0fi9yEoHgqr_ `
 }
 exports.daftarvip = daftarvip
