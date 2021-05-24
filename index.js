@@ -56,14 +56,14 @@ const { limit } = require('./database/menu/limit*/
 const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
 const tobzkey = 'apitobz';
-const BotName = '⚡NEZUKO BOT⚡'; 
+const BotName = '⚡ZENITSU BOT⚡'; 
 const instagram = 'http://www.instagram.com/'; 
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Titiu Nescau \n' // Seu nome
             + 'ORG:Lexa;\n' // Nome do Bot
-            + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 89 9887953394\n' // Numero do Whatsapp
+            + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 98 87953394\n' // Numero do Whatsapp
             + 'END:VCARD'
 prefix = '*'
 blocked = []
@@ -705,9 +705,9 @@ if (text.includes("placa"))
 	}
 			
 			
-		if (messagesC.includes("Ssecomvc?")){
+		if (messagesC.includes("GF")){
 			client.updatePresence(from, Presence.composing)
-			reply("Qbom, eu to bem")
+			reply("ala o cara faz gf kksksksksk")
 	}
 			
 
