@@ -1,5 +1,5 @@
 <p align="center" height="300" width="300">
-	<img src="./image/nezuko.jpg">
+	<img src="./image/zenitsu.jpg">
 </p>
 
 <h1>⚡ZENITSU BOT⚡ e um Bot de whatsapp feito com a base de um dos meu YouTubers favoritos <a href="https://youtube.com/CaussZ"> Causs </a></h1>
