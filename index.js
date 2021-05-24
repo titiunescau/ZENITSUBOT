@@ -705,7 +705,7 @@ if (text.includes("placa"))
 	}
 			
 			
-		if (messagesC.includes("GF")){
+		if (messagesC.includes("gf")){
 			client.updatePresence(from, Presence.composing)
 			reply("ala o cara faz gf kksksksksk")
 	}
@@ -740,7 +740,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-			if (messagesC.includes("@17853338499")){
+			if (messagesC.includes("@18077896350")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/chapa.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
