@@ -295,16 +295,16 @@ async function starts() {
 				only: {
 					group: 'Este comando so pode ser usado nos grupos neném',
 					premium: `Ei {pushname2} Só usuarios PREMIUMS podem usar este comando*`,
-					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡NEZUKO BOT ⚡*',
+					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡Zenitsu BOT ⚡*',
 					benned: 'Você foi banido, contate o dono para te desbanir',
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
 					ownerB: 'Só o Titiu Nescau  pode usar esse comando bb',
-					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡NEZUKO BOT ⚡ 」──`,
+					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡ZENITSU BOT ⚡ 」──`,
 					admin: 'Este comando só pode ser usado por administradores de grupo!',
-					Badmin: 'Este comando so pode ser usado quando o ⚡NEZUKO BOT ⚡ se torna ADM do grupo parsa',
+					Badmin: 'Este comando so pode ser usado quando o ⚡Zenitsu BOT ⚡ se torna ADM do grupo ',
 				}
 			}
-
+           
 			const botNumber = client.user.jid
 			const ownerNumber = ["559887053394@s.whatsapp.net"] // Coloque o seu numero
 			const mod = [ownerNumber,"559887053394@s.whatsapp.net"]// Moderador do bot
@@ -872,7 +872,7 @@ if (text.includes("placa"))
 	            case 'menu':
 	            case 'help':
 	            	uptime = process.uptime ()
-                    putagg = await getBuffer(`https://i.ibb.co/W5p89Mb/nezukobot2.jpg`)
+                    putagg = await getBuffer(`https://i.ibb.co/YWsL78H/zenitsubot2.jpg`)
                     client.sendMessage(from, putagg, image, {quoted: mek, caption: help(prefix, sender, pushname, time)})
                     break
                 case 'figu':
@@ -923,7 +923,7 @@ if (text.includes("placa"))
 				const pc3 = pcpau3[Math.floor(Math.random() * pcpau3.length)]
 				const pc4 = pcpau4[Math.floor(Math.random() * pcpau4.length)]
 				const pc5 = pcpau5[Math.floor(Math.random() * pcpau5.length)]
-				teks = `Esses são os caras com o menor e maior pau do Grupo\n${groupName}\n\n@${paus1.jid.split('@')[0]}\n${pc1}\n@${paus2.jid.split('@')[0]}\n${pc2}\n@${paus3.jid.split('@')[0]}\n${pc3}\n@${paus4.jid.split('@')[0]}\n${pc4}\n@${paus5.jid.split('@')[0]}\n${pc5}\n\n⚡NEZUKO BOT ⚡`
+				teks = `Esses são os caras com o menor e maior pau do Grupo\n${groupName}\n\n@${paus1.jid.split('@')[0]}\n${pc1}\n@${paus2.jid.split('@')[0]}\n${pc2}\n@${paus3.jid.split('@')[0]}\n${pc3}\n@${paus4.jid.split('@')[0]}\n${pc4}\n@${paus5.jid.split('@')[0]}\n${pc5}\n\n⚡ZENITSU BOT ⚡`
 				membr.push(paus1.jid)
 				membr.push(paus2.jid)
 				membr.push(paus3.jid)
@@ -968,7 +968,7 @@ if (text.includes("placa"))
 					mentions(teks, membr, true)
 						break
 				case 'install':
-			reply(`Aqui os comandos do ⚡NEZUKO BOT⚡ ${pushname}`)
+			reply(`Aqui os comandos do ⚡ZENITSU BOT⚡ ${pushname}`)
 			setTimeout( () => {
 			client.sendMessage(from, Presence.composing)
 			reply("Você irá precisar do Termux instalado e dois celulares, quando pedir y/n digite Y e de enter, se pedir Y/N/M/S ou algo do tipo digite Y e de enter, aí e só ir fazendo isso ate aparecer o qr code")
@@ -979,11 +979,11 @@ if (text.includes("placa"))
 			}, 2000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
-				reply("pkg install git && pkg install ffmpeg && pkg install wget && pkg install nodejs && git clone https://github.com/titiunescau/Nezukobot")
+				reply("pkg install git && pkg install ffmpeg && pkg install wget && pkg install nodejs && git clone https://github.com/titiunescau/ZENITSUBOT")
 			}, 3000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
-				reply("cd Nezukobot")
+				reply("cd ZENITSUBOT")
 			}, 5000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
@@ -1110,7 +1110,7 @@ if (text.includes("placa"))
                       const cuzao11 = cu11[Math.floor(Math.random() * cu11.length)]
                       const cuzin21 = cuz13[Math.floor(Math.random() * cuz13.length)]
                       const cuzin22 = cuz14[Math.floor(Math.random() * cuz14.length)]
-                      reply(`*${pushname2} Esses são os mais lindos do grupo\n${groupName}\n\n@554791347623\n@${cuzao11.jid.split('@')[0]} \n@${cuzao12.jid.split('@')[0]} \n@${cuzin21.jid.split('@')[0]} \n@${cuzin22.jid.split('@')[0]} \n\n Cortesia de NEZUKO BOT `)
+                      reply(`*${pushname2} Esses são os mais lindos do grupo\n${groupName}\n\n@554791347623\n@${cuzao11.jid.split('@')[0]} \n@${cuzao12.jid.split('@')[0]} \n@${cuzin21.jid.split('@')[0]} \n@${cuzin22.jid.split('@')[0]} \n\n Cortesia de ZENITSU BOT `)
                       membr.push(cu11.jid)
                       membr.push(cu12.jid)
                       membr.push(cuz13.jid)
@@ -1811,7 +1811,7 @@ if (text.includes("placa"))
 					for (let V of premium) {
 						teks += `│+  @${V.split('@')[0]}\n`
 					}
-					teks += `│+ Total : ${premium.length}\n╰──────*「 *⚡NEZUKO BOT ⚡* 」*────`
+					teks += `│+ Total : ${premium.length}\n╰──────*「 *⚡ZENITSU BOT ⚡* 」*────`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
                   case 'qrcode':
@@ -1825,7 +1825,7 @@ if (text.includes("placa"))
 		        case 'wame':
                   client.updatePresence(from, Presence.composing) 
                   options = {
-                  text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}*\n\nSeu link WhatsApp:\n\n*https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n\n*Ou*\n\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*\n\n*⚡NEZUKO BOT ⚡ NO CONTROLE*`,
+                  text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}*\n\nSeu link WhatsApp:\n\n*https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n\n*Ou*\n\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*\n\n*⚡ZENITSU BOT ⚡ NO CONTROLE*`,
                   contextInfo: { mentionedJid: [sender] }
                   }
                   client.sendMessage(from, options, text, { quoted: mek } )
@@ -2172,7 +2172,7 @@ case 'beat9':
 tujuh = fs.readFileSync('./assets/beatn.m4a');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'nezuko2':
+case 'zenitsu':
 tujuh = fs.readFileSync('./assets/nezuko-kawaii-jaleby-baby-edit-amv.mp4');
 client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 break
@@ -3017,13 +3017,13 @@ break
                    break
 					case 'usuarios':
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS ⚡NEZUKO BOT ⚡* 」\n\`\`\``
+					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS ⚡ZENITSU BOT⚡* 」\n\`\`\``
 					no = 0
 					for (let hehehe of user) {
 						no += 1
 						teks += `\`\`\`[${no.toString()}]\`\`\` @${hehehe.split('@')[0]}\n`
 					}
-					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *⚡NEZUKO BOT ⚡* 」*────`
+					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *⚡ZENITSU BOT ⚡* 」*────`
 					 client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 				case 'desligar':
@@ -3988,7 +3988,7 @@ break
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					me = client.user
 					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:*NEZUKO BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:*ZENITSU BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
 					case 'dellvip':
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -4010,7 +4010,7 @@ break
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
-					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT Nezuko ✨* 」\n*│+ wa.me/559887053394*╰──────*「 *✞Titiu Nescau✞︎* 」*────*\n\n*_SE QUER SER ADMIN DO BOT Nezuko_*\n*_Tipo /iklan_*' })
+					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT Zenitsu ✨* 」\n*│+ wa.me/559887053394*╰──────*「 *✞Titiu Nescau✞︎* 」*────*\n\n*_SE QUER SER ADMIN DO BOT Zenitsu_*\n*_Tipo /iklan_*' })
 					break
 				case 'iklan':
 					client.sendMessage(from, iklan(prefix) , text, { quoted: mek })
@@ -4019,7 +4019,7 @@ break
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/554792091566/*╰──────*「 *Titiu Nescau︎* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DOTitiu Nescau︎ BOT_*\n*_Ketik #daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/559887053394/*╰──────*「 *Titiu Nescau︎* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO Zenitsu BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
@@ -4087,7 +4087,7 @@ break
 				case 'bot':
 			     	memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos para instalar o ⚡NEZUKO BOT ⚡_\n\ntermux-setup-storage\n\npkg install git\n\npkg install ffmpeg\n\npkg install wget\n\npkg install nodejs\n\ngit clone https://github.com/titiunescau/ZENITSUBOT.git\n\ncd ZENITSUBOT\n\nbash install.sh\n\nnpm start\n\n\nescaneie o qr code q ira aparecer\n\naperte o botão "Ctrl" depois aperte "C" no teclado\n\ndigite\n\npkg install pm2\n\nnpm i -g pm2\n\npm2 start index.js\n\npm2 monit\n\n_seja feliz meu parsa_😎\n\nOBS:vc vai precisar do termux e de 2 celulares'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos para instalar o ⚡ZENITSU BOT ⚡_\n\ntermux-setup-storage\n\npkg install git\n\npkg install ffmpeg\n\npkg install wget\n\npkg install nodejs\n\ngit clone https://github.com/titiunescau/ZENITSUBOT.git\n\ncd ZENITSUBOT\n\nbash install.sh\n\nnpm start\n\n\nescaneie o qr code q ira aparecer\n\naperte o botão "Ctrl" depois aperte "C" no teclado\n\ndigite\n\npkg install pm2\n\nnpm i -g pm2\n\npm2 start index.js\n\npm2 monit\n\n_seja feliz meu parsa_😎\n\nOBS:vc vai precisar do termux e de 2 celulares'})
 					break
    				case 'belle3':
 					memein = await kagApi.memeindo()
@@ -4201,7 +4201,7 @@ break
 				case 'dono':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.ibb.co/XzYf83b/titiunescau-1.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*Criador da NEZUKO:Eae meu parsa, sou ꧁╰‿╯TITIU NESCAU ╰‿╯꧂ Pai  do toddy e sou criador do Bot NEZUKO BOT  \n*WPP:* wa.me/+559887053394\n\n\nEspero que tenham gostado do bot 💪\n*Kibadores vão se FUDER*️'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*Criador da ZENITSU:Eae meu parsa, sou ꧁╰‿╯TITIU NESCAU ╰‿╯꧂ Pai  do toddy e sou criador do Bot NEZUKO BOT e do ZENITSU BOT  \n*WPP:* wa.me/+559887053394\n\n\nEspero que tenham gostado do bot 💪\n*Kibadores vão se FUDER*️'})
 					break
 				case 'dono2':
 					memein = await kagApi.memeindo()
