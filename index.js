@@ -4087,9 +4087,9 @@ break
 				case 'bot':
 			     	memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos para instalar o ⚡NEZUKO BOT ⚡_\n\ntermux-setup-storage\n\npkg install git\n\npkg install ffmpeg\n\npkg install wget\n\npkg install nodejs\n\ngit clone https://github.com/titiunescau/Nezukobot.git\n\ncd Nezukobot\n\nbash install.sh\n\nnpm start\n\n\nescaneie o qr code q ira aparecer\n\naperte o botão "Ctrl" depois aperte "C" no teclado\n\ndigite\n\npkg install pm2\n\nnpm i -g pm2\n\npm2 start index.js\n\npm2 monit\n\n_seja feliz meu parsa_😎\n\nOBS:vc vai precisar do termux e de 2 celulares'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*_Comandos para instalar o ⚡NEZUKO BOT ⚡_\n\ntermux-setup-storage\n\npkg install git\n\npkg install ffmpeg\n\npkg install wget\n\npkg install nodejs\n\ngit clone https://github.com/titiunescau/ZENITSUBOT.git\n\ncd ZENITSUBOT\n\nbash install.sh\n\nnpm start\n\n\nescaneie o qr code q ira aparecer\n\naperte o botão "Ctrl" depois aperte "C" no teclado\n\ndigite\n\npkg install pm2\n\nnpm i -g pm2\n\npm2 start index.js\n\npm2 monit\n\n_seja feliz meu parsa_😎\n\nOBS:vc vai precisar do termux e de 2 celulares'})
 					break
-				case 'belle3':
+   				case 'belle3':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://1.bp.blogspot.com/-3K_b14RzHTA/XwTW7SQTPRI/AAAAAAAAPtY/UOaKURECbzwXfvASa3g6Pz0D_Ha73Dw4wCLcBGAsYHQ/s1600/boabronha_10.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'olha p isso mano, pqp '})
