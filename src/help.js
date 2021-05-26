@@ -121,7 +121,8 @@ const help = (prefix, sender, pushname, time) => {
 ┣⊱  **malkova*       
 ┣⊱  **canal*         
 ┣⊱  **nsfwloli1*     
-┣⊱  **reislin*       
+┣⊱  **reislin*
+┣⊱  **shadow*
 │                    
 ╰────────────────
 ╭─「 INTELIGÊNCIA 」
