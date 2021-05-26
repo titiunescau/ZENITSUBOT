@@ -887,7 +887,19 @@ if (text.includes("placa"))
             client.updatePresence(from, Presence.composing) 
 	     	const figu2 = fs.readFileSync('./sticker/pqp2.webp');
             client.sendMessage(from, figu2, sticker, {quoted: mek})
-            		break
+            		break 
+		        case 'ttp':
+                 msgFilter.isFiltered(from)
+                 if (args.length < 1) return reply(`Use dessa forma:\nComando: ${prefix}ttp Toin gado`)
+                 attp2 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${encodeURIComponent(body.slice(4))}`)
+                 client.sendMessage(from, attp2, sticker, {quoted: mek})
+                         break
+
+                       case 'attp':
+                 if (args.length < 1) return reply(`Use dessa forma:\nComando: ${prefix}attp Toin gado`)
+                 attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(body.slice(5))}`)
+                 client.sendMessage(from, attp2, sticker, {quoted: mek})
+                        break
                 case 'eu':
                 putagg = await getBuffer(`https://i.ibb.co/TthtCSG/pakipariu-doido.jpg`)
                 client.sendMessage(from, putagg, buffer, {quoted: mek, caption: 'Vc'})
@@ -899,7 +911,7 @@ if (text.includes("placa"))
 		    case 'shadow':
                reply('pode da erro amor, mais espera ai')			
                teks = body.slice(7)
-               post = await fetchJson(`https://api-exteam.herokuapp.com/api/photooxy?tema=shadow&text=${teks}`)
+               post = await fetchJson(`https://api-exteam.herokuapp.com/api/photooxy?tema=lovetext&text=EX%20TEAM{teks}`)
                buffer = await getBuffer(post.result)
                client.sendMessage(from, buffer, image, {quoted: mek})
                      break
