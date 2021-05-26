@@ -908,13 +908,19 @@ if (text.includes("placa"))
                     putagg = await getBuffer(`https://i.ibb.co/mt4FvHN/Animes.png`)
                     client.sendMessage(from, putagg, image, {quoted: mek, caption: animes(prefix, pushname)})
                     break 
-		    case 'shadow':
-               reply('pode da erro amor, mais espera ai')			
-               teks = body.slice(7)
-               post = await fetchJson(`https://api-exteam.herokuapp.com/api/photooxy?tema=lovetext&text=EX%20TEAM{teks}`)
-               buffer = await getBuffer(post.result)
-               client.sendMessage(from, buffer, image, {quoted: mek})
-                     break
+		    case 'shadow': 
+				if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply(mess.blank)
+					shad = body.slice(8)
+					reply(mess.wait)
+					ssha = await getBuffer(`https://api-anoncybfakeplayer.herokuapp.com/photooxy/shadowtext?text=${shad}`)
+					client.sendMessage(from, ssha, image, {caption: 'Nihkkkak', quoted: mek})
+					break 
+             			
+
+
+
+
 				case 'help1':
 				case 'menu1':
 					client.sendMessage(from, help1(prefix), text)
