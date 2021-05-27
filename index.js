@@ -3351,7 +3351,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*MUSICA ENCONTRADA!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N SPAME O CHAT*`
+                 infomp3 = `*MUSICA ENCONTRADA!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N SPAME O CHAT TABOM*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -3546,9 +3546,8 @@ break
 						client.sendMessage(from, buffer, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
-					break
-				case 'lovemake':
-					if (args.length < 1) return reply('Cadê o texto, hum')
+					case 'lovemake':
+					if (args.length < 1) return reply('Cadê o texto, hum neném')
 					love = body.slice(10)
 					if (love.length > 12) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
@@ -3556,7 +3555,7 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'thunder':
-					if (args.length < 1) return reply('Cadê o texto, hum')
+					if (args.length < 1) return reply('Cadê o texto, hum neném')
 					thun = body.slice(9)
 					if (thun.length > 10) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
@@ -3907,14 +3906,6 @@ break
 							fs.unlinkSync(rano)
 						})
 					})
-					break
-				case 'shadow': 
-				if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply(mess.blank)
-					shad = body.slice(8)
-					reply(mess.wait)
-					ssha = await getBuffer(`https://api-anoncybfakeplayer.herokuapp.com/photooxy/shadowtext?text=${shad}`)
-					client.sendMessage(from, ssha, image, {caption: 'Nihkkkak', quoted: mek})
 					break
 				case 'minion':
 				if (!isOwner) return reply(mess.only.ownerB)
@@ -4388,7 +4379,7 @@ break
 						reply('Transmissão enviada com sucesso')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ RAPAZIADA OLHA ESSE AVISO ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ Amores olha essa aviso ]\n\n${body.slice(4)}`)
 						}
 						reply('Transmissão enviada com sucesso')
 					}
