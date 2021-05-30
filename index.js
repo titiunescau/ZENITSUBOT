@@ -958,7 +958,7 @@ client.sendMessage(from, open, text, {
   quoted: mek
 })
 break
-case 'fecharg':
+                            case 'fecharg':
 client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(ptbr.group())
 if (!isGroupAdmins) return reply(ptbr.admin())
@@ -970,7 +970,7 @@ contextInfo: {
 mentionedJid: [nomor]
 }
 }
-client.groupSettingChange (from, GroupSettingChange.messageSend, true);
+client.groupSettingChange (from, GroupSettingChange.messageSend, false);
 reply(close)
 break
                 case 'eu':
