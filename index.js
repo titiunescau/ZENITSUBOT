@@ -964,13 +964,23 @@ if (!isGroup) return reply(ptbr.group())
 if (!isGroupAdmins) return reply(ptbr.admin())
 if (!isBotGroupAdmins) return reply(ptbr.Badmin())
 close = {
-text: `Grupo fechado por: @${sender.split("@s.whatsapp.net")[0]}`,
-contextInfo: {
+text: `Grupo fechado por: @${sender.split("@")[0]}`,
+  contextInfo: {
 mentionedJid: [sender]
   }
 }
-client.groupSettingChange (from, GroupSettingChange.messageSend, true);
-reply(close)
+client.groupSettingChange (from, GroupSettingChange.messageSend, false)
+client.sendMessage(from, close, text, {
+  quoted: mek
+})
+break 
+					case 'online':
+msgFilter.isFiltered(from)
+let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+let online = [...Object.keys(client.chats.get(ido).presences), client.user.jid]
+client.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
+contextInfo: { mentionedJid: online }
+})
 break
                 case 'eu':
                 putagg = await getBuffer(`https://i.ibb.co/TthtCSG/pakipariu-doido.jpg`)
