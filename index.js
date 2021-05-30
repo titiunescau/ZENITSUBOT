@@ -964,10 +964,10 @@ if (!isGroup) return reply(ptbr.group())
 if (!isGroupAdmins) return reply(ptbr.admin())
 if (!isBotGroupAdmins) return reply(ptbr.Badmin())
 close = {
-text: `Grupo fechado por: @${nomor.split("@s.whatsapp.net")[0]}`,
+text: `Grupo fechado por: @${sender.split("@s.whatsapp.net")[0]}`,
 contextInfo: {
-mentionedJid: [nomor]
-}
+mentionedJid: [sender]
+  }
 }
 client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 reply(close)
