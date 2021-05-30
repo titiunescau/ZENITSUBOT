@@ -964,13 +964,13 @@ if (!isGroup) return reply(ptbr.group())
 if (!isGroupAdmins) return reply(ptbr.admin())
 if (!isBotGroupAdmins) return reply(ptbr.Badmin())
 var nomor = mek.participant
-const close = {
+close = {
 text: `Grupo fechado por: @${nomor.split("@s.whatsapp.net")[0]}`,
 contextInfo: {
 mentionedJid: [nomor]
 }
 }
-client.groupSettingChange (from, GroupSettingChange.messageSend, false);
+client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 reply(close)
 break
                 case 'eu':
