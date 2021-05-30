@@ -963,7 +963,6 @@ client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(ptbr.group())
 if (!isGroupAdmins) return reply(ptbr.admin())
 if (!isBotGroupAdmins) return reply(ptbr.Badmin())
-var nomor = mek.participant
 close = {
 text: `Grupo fechado por: @${nomor.split("@s.whatsapp.net")[0]}`,
 contextInfo: {
