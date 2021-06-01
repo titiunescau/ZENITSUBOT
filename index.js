@@ -934,7 +934,8 @@ client.sendMessage(from, close, text, {
 })
 break 
 					case 'online':
-msgFilter.isFiltered(from) let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+msgFilter.isFiltered(from) 
+let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
 let online = [...Object.keys(client.chats.get(ido).presences), client.user.jid]
 client.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
 contextInfo: { mentionedJid: online }
