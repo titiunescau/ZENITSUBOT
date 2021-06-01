@@ -934,12 +934,38 @@ client.sendMessage(from, close, text, {
 })
 break 
 					case 'online':
-msgFilter.isFiltered(from)
-let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+msgFilter.isFiltered(from) let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
 let online = [...Object.keys(client.chats.get(ido).presences), client.user.jid]
 client.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
 contextInfo: { mentionedJid: online }
 })
+break 
+					case 'infogp':
+case 'infogc':
+case 'groupinfo':
+case 'infogrup':
+case 'grupinfo':
+msgFilter.isFiltered(from)
+client.updatePresence(from, Presence.composing)
+if (!isGroup) return reply(ptbr.group())
+let { owner, creation, participants, desc } = groupMetadata;
+const creationTime = moment.unix(creation);
+try {
+ppUrl = await client.getProfilePicture(from)
+} catch {
+ppUrl = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+}
+buffer = await getBuffer(ppUrl)
+infogp = 
+` 
+  ‣Nome: ${groupName}
+  ‣Quantidade de membros: ${groupMembers.length}
+  ‣Total de administradores: ${groupAdmins.length}
+  ‣Criador : @${owner.split('@')[0]}
+  ‣Total de membros: ${participants.length} membros
+  ‣Descrição:
+  ${desc ? desc : ''}`
+await tiringa.sendMessage(from, buffer, image, {quoted: mek, caption: infogp, contextInfo: {mentionedJid: [owner.split]}})
 break
                 case 'eu':
                 putagg = await getBuffer(`https://i.ibb.co/TthtCSG/pakipariu-doido.jpg`)
@@ -1145,7 +1171,7 @@ break
 					const cornos5 = corno5[Math.floor(Math.random() * corno5.length)]
 					var porcentagemcorno = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `O chifre desse ai bate na lua ksksksk`]
 					const porcentagemc = porcentagemcorno[Math.floor(Math.random() * porcentagemcorno.length)]
-					teks = `${pushname} Esses são os cornos do grupo ${groupName}\n@${cornos1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n\n Sem pressão Neném, ⚡Xandão⚡ ta aqui`
+					teks = `${pushname} Esses são os cornos do grupo ${groupName}\n@${cornos1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n\n Sem pressão Neném, ⚡ZENITSU⚡ ta aqui`
 					membr.push(cornos1.jid)
 					membr.push(cornos2.jid)
 					membr.push(cornos3.jid)
@@ -3191,7 +3217,7 @@ break
 						reply(`MANDE NA LEGENDA DE UMA FOTO SE VOCÊ DESEJA DESLIGAR O BOT!`)
 					}
 					break
-			case 'closegc':
+			case 'fechargp':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -3756,7 +3782,7 @@ break
 			    case 'fakereplay':
                    client.reply(from, 'ange mas', 'mending lari', "0816-5466368")
                    break
-				case 'infogc':
+				case 'infogp':
 				client.updatePresence(from, Presence.composing)
 				if (!isGroup) return reply(mess.only.group)
 					try {
