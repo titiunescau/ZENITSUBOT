@@ -709,6 +709,11 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing)
 			reply("ala o cara faz gf kksksksksk")
 	}
+		
+		if (messagesC.includes("casa cmg?")){
+			client.updatePresence(from, Presence.composing)
+			reply("claro amor")
+	}
 			
 
 		if (messagesC.includes("nescau")){
