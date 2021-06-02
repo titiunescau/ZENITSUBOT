@@ -3347,14 +3347,14 @@ break
 					client.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
 					await limitAdd(sender) 
 					break 
-                case 'opengc'
-		case 'bukagc'
+                case 'opengc':
+                case 'bukagc':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					open = {
-					text: `Grupo aberto pelo administrador @${sender.split("@")[0]}\nAgora *todos os participantes* pode enviar mensagens`,
+					text: `Grupo aberto pelo administrador @${sender.split("@")[0]}\nAgora todos os participantes pode enviar mensagens`,
 					contextInfo: { mentionedJid: [sender] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
