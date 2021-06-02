@@ -294,7 +294,7 @@ async function starts() {
 				},
 				only: {
 					group: 'Este comando so pode ser usado nos grupos neném',
-					premium: `Ei ${pushname2} Só usuarios PREMIUMS podem usar este comando*`,
+					premium: `Ei {pushname2} Só usuarios PREMIUMS podem usar este comando*`,
 					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡Zenitsu BOT ⚡*',
 					benned: 'Você foi banido, contate o dono para te desbanir',
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
