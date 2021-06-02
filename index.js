@@ -1149,7 +1149,7 @@ break
 					const gays5 = gay5[Math.floor(Math.random() * gay5.length)]
 					var porcentagemgay = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
 					const porcentagem = porcentagemgay[Math.floor(Math.random() * porcentagemgay.length)]
-					teks = `${pushname} Esses são os mais SuperGays do grupo ${groupName}\n@${gays1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n\n Sem pressão Neném, ⚡Xandão⚡ ta aqui`
+					teks = `${pushname} Esses são os mais SuperGays do grupo ${groupName}\n@${gays1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n\n Sem pressão Neném, ⚡ZENITSU⚡ ta aqui`
 					membr.push(gays1.jid)
 					membr.push(gays2.jid)
 					membr.push(gays3.jid)
@@ -1394,7 +1394,7 @@ break
 					gh = `${body.slice(12)}`
 					gbl1 = gh.split("/")[0];
 					gbl2 = gh.split("/")[1];
-					if (args.length < 1) return reply('Sou Vidente porra? cade o texto?')
+					if (args.length < 1) return reply('Amor cade o texto?')
 					buffer = await getBuffer(`https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${teks}`, {method: 'get'})
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender) 
@@ -1404,7 +1404,7 @@ break
 					gh = `${body.slice(12)}`
 					gbl1 = gh.split("/")[0];
 					gbl2 = gh.split("/")[1];
-					if (args.length < 1) return reply('Sou Vidente porra? cade o texto?')
+					if (args.length < 1) return reply('Amor cade o texto?')
 					buffer = await getBuffer(`https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=ZEKS&text2=API`, {method: 'get'})
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					await limitAdd(sender) 
@@ -1968,7 +1968,7 @@ break
 			     	break 
             case 'onichan':
             case 'bodoh':
-                client.sendMessage(from, buff, './lindy/baka.mp3', audio/mp3, {quoted: mek, ptt:true})
+                client.sendMessage(from, buff,'./lindy/baka.mp3', audio/mp3, {quoted: mek, ptt:true})
                 break
 				case 'daftar':
 					client.updatePresence(from, Presence.composing)
@@ -3347,8 +3347,7 @@ break
 					client.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
 					await limitAdd(sender) 
 					break 
-                case 'opengc':
-                case 'bukagc':
+                case 'opengc'
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -4546,7 +4545,7 @@ break
                                         }
                                         break
 				case 'toimg':
-					if (!isQuotedSticker) return reply('{ ❗ } *Marque a figurinha*')
+					if (!isQuotedSticker) return reply('{ ❗ } *Marque a figurinha amor*')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
