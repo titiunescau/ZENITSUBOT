@@ -3348,7 +3348,7 @@ break
 					await limitAdd(sender) 
 					break 
                 case 'opengc'
-					client.updatePresence(from, Presence.composing) 
+		case 'bukagc'			client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
