@@ -884,41 +884,6 @@ if (text.includes("placa"))
                             console.log('Error : %s', color(e, 'red'))
                     }
     })
-	/*client.on('group-participants-update', async (anu) => {
-if (!welkom.includes(anu.jid)) return
-                try {
-                        const imgur = require('imgur')
-            num = anu.participants[0]
-            const mdata = await client.groupMetadata(anu.jid)
-            try {
-                var pp_user = await client.getProfilePicture(num)
-            } catch (e) {
-                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
-            }
-            exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
-                        exetwo = getRandom('.jpeg')
-                        fs.writeFileSync(exetwo, exeone, 'Base64')
-                        let psCAPA = await imgur.uploadFile(exetwo)
-                        fs.unlinkSync(exetwo)
-            if (anu.action == 'add') {
-                ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
-                teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
-Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
- ⚡ ⚡Zenitsu⚡ ⚡ 
- ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
-                group_info = await client.groupMetadata(anu.jid)
-                client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-            }
-            if (anu.action == 'remove') {
-                ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
-                client.sendMessage(anu.jid, ini_img, MessageType.image)
-            }
-                } catch (e) {
-                        console.log('Error : %s', color(e, 'red'))
-                }
-})*/
 	client.on('CB:Blocklist', json => {
             if (blocked.length > 2) return
 	    for (let i of json[1].blocklist) {
