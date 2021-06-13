@@ -4814,7 +4814,10 @@ break
 						console.log(color('[ERRO]','red'), 'krlh menor, esse comando não registrado', color(sender.split('@')[0]))
 					}
                            }
-		} {
+		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
+	})
+}
 starts()
+					
