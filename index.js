@@ -668,7 +668,10 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing)
 			reply("Teu pai")
 	}
-	
+	if (messagesC.includes("bot chato")){
+			client.updatePresence(from, Presence.composing)
+			reply("fds meu consagrado?")
+	}
 		if (messagesC.includes("corno")){
 			client.updatePresence(from, Presence.composing)
 			reply("Vsfd seu merda")
@@ -694,11 +697,15 @@ if (text.includes("placa"))
 			reply("opa")
 	}
 
-		if (messagesC.includes("causs")){
+		if (messagesC.includes("nescau")){
 			client.updatePresence(from, Presence.composing)
 			reply("Gostosooooooooooo, muito gostoso")
 	}
-	
+			
+	        if (messagesC.includes("toddy")){
+			client.updatePresence(from, Presence.composing)
+			reply("ruim pra karalho")
+	}
 		if (messagesC.includes("oiii")){
 			client.updatePresence(from, Presence.composing)
 			reply("oiii meu amor,tudo bem ?")
@@ -716,9 +723,9 @@ if (text.includes("placa"))
 	}
 			
 
-		if (messagesC.includes("nescau")){
+		if (messagesC.includes("Cadê o bot")){ 
 			client.updatePresence(from, Presence.composing)
-			reply("Saca só")
+			reply("to aki lindo(a)")
 	}
 
 			if (messagesC.includes("bah")){
@@ -807,9 +814,9 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 
-			if (messagesC.includes("nezuko")){
+			if (messagesC.includes("pare")){
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/pqp.webp');
+	     	const d = fs.readFileSync('./sticker/pare.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 	
@@ -858,7 +865,66 @@ if (text.includes("placa"))
                 hasil = await getBuffer(randKey.result)
                 sendImage(hasil, mek, 'meme')
 	}
-	
+	 if (anu.action == 'add') {
+                    ini_user = client.contacts[num]
+                    ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                    teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
+    Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
+    ⚡ ⚡Zenitsu⚡ ⚡ 
+    ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
+                    group_info = await client.groupMetadata(anu.jid)
+                    client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+                }
+                if (anu.action == 'remove') {
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                client.sendMessage(anu.jid, ini_img, MessageType.image)
+                }
+                    } catch (e) {
+                            console.log('Error : %s', color(e, 'red'))
+                    }
+    })
+	/*client.on('group-participants-update', async (anu) => {
+if (!welkom.includes(anu.jid)) return
+                try {
+                        const imgur = require('imgur')
+            num = anu.participants[0]
+            const mdata = await client.groupMetadata(anu.jid)
+            try {
+                var pp_user = await client.getProfilePicture(num)
+            } catch (e) {
+                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
+                        exetwo = getRandom('.jpeg')
+                        fs.writeFileSync(exetwo, exeone, 'Base64')
+                        let psCAPA = await imgur.uploadFile(exetwo)
+                        fs.unlinkSync(exetwo)
+            if (anu.action == 'add') {
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
+Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
+ ⚡ ⚡Zenitsu⚡ ⚡ 
+ ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
+                group_info = await client.groupMetadata(anu.jid)
+                client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+            }
+            if (anu.action == 'remove') {
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                client.sendMessage(anu.jid, ini_img, MessageType.image)
+            }
+                } catch (e) {
+                        console.log('Error : %s', color(e, 'red'))
+                }
+})*/
+	client.on('CB:Blocklist', json => {
+            if (blocked.length > 2) return
+	    for (let i of json[1].blocklist) {
+	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
+	    }
+	})
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
@@ -936,18 +1002,16 @@ client.sendMessage(from, close, text, {
 })
 break 
 					case 'online':
-msgFilter.isFiltered(from) 
+MsgFilter.isFiltered(from) 
+client.updatePresence(from, Presence.composing)
 let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
 let online = [...Object.keys(client.chats.get(ido).presences), client.user.jid]
 client.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
 contextInfo: { mentionedJid: online }
 })
 break 
-					case 'infogp':
-case 'infogc':
-case 'groupinfo':
-case 'infogrup':
-case 'grupinfo':
+					
+case 'grupoinfo': 
 msgFilter.isFiltered(from)
 client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(ptbr.group())
@@ -990,9 +1054,6 @@ wew = fs.readFileSync('./sticker/kkk.webp')
 					ssha = await getBuffer(`https://api-anoncybfakeplayer.herokuapp.com/photooxy/shadowtext?text=${shad}`)
 					client.sendMessage(from, ssha, image, {caption: 'Nihkkkak', quoted: mek})
 					break 
-             			
-
-
 
 
 				case 'help1':
@@ -1031,7 +1092,7 @@ wew = fs.readFileSync('./sticker/kkk.webp')
 				mentions(teks, membr, true)
 					break
 				case 'otakus':
-					if (!isGroup) return reply(`Comando so pode ser utiizado em grupos parsa`)
+					if (!isGroup) return reply(`Comando so pode ser utiizado em grupos baby`)
 					membr = []
 					const otaku1 = groupMembers
 					const otaku2 = groupMembers
@@ -1105,19 +1166,56 @@ wew = fs.readFileSync('./sticker/kkk.webp')
                   	fs.unlinkSync(ran);
                	   });
                			break
-					case 'kiss':
-				    try {    
-					
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/kiss?apikey=BotWeA`, {method: 'get'})
-						bufferv = await getBuffer(res.result)
-						client.sendMessage(from, bufferv, image, {quoted: mek, caption: 'ezzzz'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						sa = await getBuffer(`https://i.ibb.co/JcSjmNY/IMG-20210107-WA0052.jpg`)
-						client.sendMessage(from, sa, image, {quoted: mek, caption: 'Erro como!!'})
-						reply('EITA VEY DEU ERRO AQUI MN')
-					}
-					break
+					case 'beijar':
+                    if (!isGroup) return reply('So em grupo')
+                    if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
+                        mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+                    if (mentioned.length > 1) {
+                        teks = 'beijar\n'
+                        for (let _ of mentioned) {
+                            teks += `@${_.split('@')[0]}\n`
+                        }
+                        mentions(from, mentioned, true)
+                        client.sendMessage(from, mentioned)
+                    } else {
+                        mentions(`Eita bixo, @${sender.split('@')[0]} deu um beijo em @${mentioned[0].split('@')[0]} `, mentioned, true)
+                        client.sendMessage(from, mentioned)
+                    }case 'revert':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp3');
+                        exec(`ffmpeg -i ${media} -af "areverse" ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
+                        case 'Videore':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp4');
+                        exec(`ffmpeg -i ${media} -af "areverse" ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, video, { mimetype: 'video/mp4', quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
+                        case 'vibrato':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp3');
+                        exec(`ffmpeg -i ${media} -af vibrato=f=11 ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
 					case 'lista':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply('Você quem é, o proprietário?')
@@ -1224,8 +1322,8 @@ wew = fs.readFileSync('./sticker/kkk.webp')
 						break
                    case 'saylist':
 					teks = 'Esta é a lista de dizeres :\n'
-					for (let awokwkwk of sayrandom) {
-						teks += `╠➥ ${awokwkwk}\n`
+					for (let Lista of sayrandom) {
+						teks += `╠➥ ${Lista}\n`
 					}
 					teks += `Total : ${sayrandom.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": sayrandom}})
