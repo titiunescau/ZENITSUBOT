@@ -4811,13 +4811,12 @@ break
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERRO]','red'), 'krlh menor, esse comando não registrado', color(sender.split('@')[0]))
+						console.log(color('ERRO','red'), '\x1b[1;36mCOMANDO NÃO REGISTRADO de ', color(sender.split('@')[0]))
 					}
-                           {
-				   
-			console.log('Error : %s', color('red'))
+                           }
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
 		}
-	}
+	})
 }
 starts()
-					
