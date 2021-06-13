@@ -4817,7 +4817,7 @@ break
 				   
 			console.log('Error : %s', color('red'))
 		}
-	})
+	}
 }
 starts()
 					
