@@ -734,13 +734,9 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-			if (messagesC.includes("*menu")){
-			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/pressao.mp3');
-            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-	}
+			        
 	
-			if (messagesC.includes("@17853338499")){
+			if (messagesC.includes("@552795180011")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/chapa.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
