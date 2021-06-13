@@ -4778,8 +4778,10 @@ break
 					} else {
 						console.log(color('ERRO','red'), '\x1b[1;36mCOMANDO NÃO REGISTRADO de ', color(sender.split('@')[0]))
 					}
-                           {
+                           }
+		{
 			console.log('Error : %s', color(e, 'red'))
 		}
-
+	})
+}
 starts()
