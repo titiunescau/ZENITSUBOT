@@ -873,6 +873,54 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break
+					case 'revert':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp3');
+                        exec(`ffmpeg -i ${media} -af "areverse" ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
+					 case 'Videore':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp4');
+                        exec(`ffmpeg -i ${media} -af "areverse" ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, video, { mimetype: 'video/mp4', quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
+					 case 'vibrato':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp3');
+                        exec(`ffmpeg -i ${media} -af vibrato=f=11 ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
+					 case 'converter':
+                        encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
+                        media = await client.downloadAndSaveMediaMessage(encmedia);
+                        ran = getRandom('.mp3');
+                        exec(`ffmpeg -i ${media} -af equalizer=f=0:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
+                            fs.unlinkSync(media);
+                            if (err) return reply('Error!');
+                            hah = fs.readFileSync(ran);
+                            client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek });
+                            fs.unlinkSync(ran);
+                        });
+                            break
 		        case 'ttp':
                  msgFilter.isFiltered(from)
                  if (args.length < 1) return reply(`Use dessa forma:\nComando: ${prefix}ttp Toin gado`)
