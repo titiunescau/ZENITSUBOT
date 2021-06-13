@@ -48,10 +48,13 @@ const help = (prefix, sender, pushname, time) => {
 ╭────「 COMANDOS NOVOS 」
 │                          
 ┣⊱  *supergay
-┣⊱  *abrirgp 
+┣⊱  *openg 
 ┣⊱  *fechargp
 ┣⊱  *gostosa               
-┣⊱  *casal                 
+┣⊱  *casal 
+┣⊱  *revert
+┣⊱  *videore
+┣⊱  *vibrato
 ┣⊱  ${prefix}cornos        
 │                          
 ╰──────────────────────
