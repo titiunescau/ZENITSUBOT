@@ -1602,7 +1602,7 @@ break
 					} else if ((args[0]) === 'off') {
 						antiracismo.splice(from, 1)
 						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
-						reply(`\`\`\`✓Modo antiracismo desativado com sucesso no grupo\`\`\` *${groupMetadata.subject}*`)
+						reply(`\`\`\`✓Modo antiracismo desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
@@ -1619,7 +1619,7 @@ break
 					} else if ((args[0]) === 'off') {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`\`\`\`✓Modo nsfw desativado com sucesso no grupo\`\`\` *${groupName}*`)
+						reply(`\`\`\`✓Modo nsfw desativado com sucesso no grupo😡\`\`\` *${groupName}*`)
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
