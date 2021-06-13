@@ -860,10 +860,10 @@ if (text.includes("placa"))
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
-			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTADO\x1b[1;37m]', time, color(command), 'do parsa', color(sender.split('@')[0]), 'Artigo :', color(args.length))
-			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEBIDO\x1b[1;37m]', time, color('Menssagem'), 'do parsa', color(sender.split('@')[0]), 'Artigo :', color(args.length))
-			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTADO\x1b[1;37m]', time, color(command), 'do parsa', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
-			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEBIDO\x1b[1;37m]', time, color('Menssagem'), 'do parsa', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
+			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTADO\x1b[1;37m]', time, color(command), 'do amigo', color(sender.split('@')[0]), 'Artigo :', color(args.length))
+			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEBIDO\x1b[1;37m]', time, color('Menssagem'), 'do amigoo', color(sender.split('@')[0]), 'Artigo :', color(args.length))
+			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTADO\x1b[1;37m]', time, color(command), 'do amigo', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
+			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEBIDO\x1b[1;37m]', time, color('Menssagem'), 'do amigo', color(sender.split('@')[0]), 'No grupo', color(groupName), 'Artigo :', color(args.length))
 			switch(command) {
 	            case 'menu':
 	            case 'help':
