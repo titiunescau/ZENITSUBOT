@@ -935,7 +935,7 @@ client.sendMessage(from, close, text, {
   quoted: mek
 })
 break 
-                case 'figu':
+                case 'figur':
 			client.updatePresence(from, Presence.composing) 
 	     	const figu = fs.readFileSync('./sticker/pqp.webp');
             client.sendMessage(from, figu, sticker, {quoted: mek})
