@@ -56,7 +56,7 @@ const { limit } = require('./database/menu/limit*/
 const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
 const tobzkey = 'apitobz';
-const BotName = '⚡NEZUKO BOT⚡'; 
+const BotName = '⚡ZENITSU BOT⚡'; 
 const instagram = 'http://www.instagram.com/'; 
 const aktif = '08:00 - 22:00';
 const vcard = 'BEGIN:VCARD\n'
@@ -295,13 +295,13 @@ async function starts() {
 				only: {
 					group: 'Este comando so pode ser usado nos grupos neném',
 					premium: `Ei {pushname2} Só usuarios PREMIUMS podem usar este comando*`,
-					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡NEZUKO BOT ⚡*',
+					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡Zenitsu BOT ⚡*',
 					benned: 'Você foi banido, contate o dono para te desbanir',
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
 					ownerB: 'Só o Titiu Nescau  pode usar esse comando bb',
 					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡NEZUKO BOT ⚡ 」──`,
 					admin: 'Este comando só pode ser usado por administradores de grupo!',
-					Badmin: 'Este comando so pode ser usado quando o ⚡NEZUKO BOT ⚡ se torna ADM do grupo parsa',
+					Badmin: 'Este comando so pode ser usado quando o ⚡Zenitsu BOT ⚡ se torna ADM do grupo parsa',
 				}
 			}
 
@@ -875,21 +875,8 @@ if (text.includes("placa"))
                     var setP = [`https://i.ibb.co/YWsL78H/zenitsubot2.jpg`,`https://i.ibb.co/gzhxmPb/STK-20210604-WA0113.webp`]
                 const getFoto = setP[Math.floor(Math.random() * setP.length)]
                 const nescau = await getBuffer(getFoto)
-                client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Nezuko⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
+                client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break
-              case 'figu':
-			client.updatePresence(from, Presence.composing) 
-	     	const figu = fs.readFileSync('./sticker/pqp.webp');
-            client.sendMessage(from, figu, sticker, {quoted: mek})
-
-            client.updatePresence(from, Presence.composing) 
-	     	const figu1 = fs.readFileSync('./sticker/pqp1.webp');
-            client.sendMessage(from, figu1, sticker, {quoted: mek})
-
-            client.updatePresence(from, Presence.composing) 
-	     	const figu2 = fs.readFileSync('./sticker/pqp2.webp');
-            client.sendMessage(from, figu2, sticker, {quoted: mek})
-            		break 
 		        case 'ttp':
                  msgFilter.isFiltered(from)
                  if (args.length < 1) return reply(`Use dessa forma:\nComando: ${prefix}ttp Toin gado`)
@@ -935,9 +922,9 @@ client.sendMessage(from, close, text, {
   quoted: mek
 })
 break 
-                case 'igu':
+                case 'figu':
 			client.updatePresence(from, Presence.composing) 
-	     	const figu = fs.readFileSync('./sticker/pqp.webp');
+	     	const figu0 = fs.readFileSync('./sticker/pqp.webp');
             client.sendMessage(from, figu, sticker, {quoted: mek})
 
             client.updatePresence(from, Presence.composing) 
