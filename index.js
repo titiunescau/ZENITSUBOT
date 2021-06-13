@@ -865,31 +865,7 @@ if (text.includes("placa"))
                 hasil = await getBuffer(randKey.result)
                 sendImage(hasil, mek, 'meme')
 	}
-	 if (anu.action == 'add') {
-                    ini_user = client.contacts[num]
-                    ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
-                    teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
-    Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
-    ⚡ ⚡Zenitsu⚡ ⚡ 
-    ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
-                    group_info = await client.groupMetadata(anu.jid)
-                    client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-                }
-                if (anu.action == 'remove') {
-                ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
-                client.sendMessage(anu.jid, ini_img, MessageType.image)
-                }
-                    } catch (e) {
-                            console.log('Error : %s', color(e, 'red'))
-                    }
-    })
-	client.on('CB:Blocklist', json => {
-            if (blocked.length > 2) return
-	    for (let i of json[1].blocklist) {
-	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
-	    }
-	})
+	
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
