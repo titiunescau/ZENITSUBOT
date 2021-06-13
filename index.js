@@ -299,7 +299,7 @@ async function starts() {
 					benned: 'Você foi banido, contate o dono para te desbanir',
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
 					ownerB: 'Só o Titiu Nescau  pode usar esse comando bb',
-					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡NEZUKO BOT ⚡ 」──`,
+					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡Zenitsu BOT ⚡ 」──`,
 					admin: 'Este comando só pode ser usado por administradores de grupo!',
 					Badmin: 'Este comando so pode ser usado quando o ⚡Zenitsu BOT ⚡ se torna ADM do grupo parsa',
 				}
@@ -705,9 +705,9 @@ if (text.includes("placa"))
 	}
 			
 			
-		if (messagesC.includes("Ssecomvc?")){
+		if (messagesC.includes("bot horrível")){
 			client.updatePresence(from, Presence.composing)
-			reply("Qbom, eu to bem")
+			reply("karalho man")
 	}
 			
 
@@ -985,7 +985,7 @@ break
 				const pc3 = pcpau3[Math.floor(Math.random() * pcpau3.length)]
 				const pc4 = pcpau4[Math.floor(Math.random() * pcpau4.length)]
 				const pc5 = pcpau5[Math.floor(Math.random() * pcpau5.length)]
-				teks = `Esses são os caras com o menor e maior pau do Grupo\n${groupName}\n\n@${paus1.jid.split('@')[0]}\n${pc1}\n@${paus2.jid.split('@')[0]}\n${pc2}\n@${paus3.jid.split('@')[0]}\n${pc3}\n@${paus4.jid.split('@')[0]}\n${pc4}\n@${paus5.jid.split('@')[0]}\n${pc5}\n\n⚡NEZUKO BOT ⚡`
+				teks = `Esses são os caras com o menor e maior pau do Grupo\n${groupName}\n\n@${paus1.jid.split('@')[0]}\n${pc1}\n@${paus2.jid.split('@')[0]}\n${pc2}\n@${paus3.jid.split('@')[0]}\n${pc3}\n@${paus4.jid.split('@')[0]}\n${pc4}\n@${paus5.jid.split('@')[0]}\n${pc5}\n\n⚡ ZenitsuBOT ⚡`
 				membr.push(paus1.jid)
 				membr.push(paus2.jid)
 				membr.push(paus3.jid)
@@ -1016,7 +1016,7 @@ break
 					const otakus8 = otaku8[Math.floor(Math.random() * otaku8.length)]
 					const otakus9 = otaku9[Math.floor(Math.random() * otaku9.length)]
 					const otakus10 = otaku10[Math.floor(Math.random() * otaku10.length)]
-					teks = `${pushname} esses são os otakus fedidos do grupo\n@${otakus1.jid.split('@')[0]}\n@${otakus2.jid.split('@')[0]}\n@${otakus3.jid.split('@')[0]}\n@${otakus4.jid.split('@')[0]}\n@${otakus5.jid.split('@')[0]}\n@${otakus6.jid.split('@')[0]}\n@${otakus7.jid.split('@')[0]}\n@${otakus8.jid.split('@')[0]}\n@${otakus9.jid.split('@')[0]}\n@${otakus10.jid.split('@')[0]}\n\nSEM PRESSÃO AQUI É ⚡NEZUKO  ⚡`
+					teks = `${pushname} esses são os otakus fedidos do grupo\n@${otakus1.jid.split('@')[0]}\n@${otakus2.jid.split('@')[0]}\n@${otakus3.jid.split('@')[0]}\n@${otakus4.jid.split('@')[0]}\n@${otakus5.jid.split('@')[0]}\n@${otakus6.jid.split('@')[0]}\n@${otakus7.jid.split('@')[0]}\n@${otakus8.jid.split('@')[0]}\n@${otakus9.jid.split('@')[0]}\n@${otakus10.jid.split('@')[0]}\n\nSEM PRESSÃO AQUI É ⚡Zenitsu ⚡`
 					membr.push(otakus1.jid)
 					membr.push(otakus2.jid)
 					membr.push(otakus3.jid)
@@ -1030,7 +1030,7 @@ break
 					mentions(teks, membr, true)
 						break
 				case 'install':
-			reply(`Aqui os comandos do ⚡NEZUKO BOT⚡ ${pushname}`)
+			reply(`Aqui os comandos do ⚡ZRNITSU BOT⚡ ${pushname}`)
 			setTimeout( () => {
 			client.sendMessage(from, Presence.composing)
 			reply("Você irá precisar do Termux instalado e dois celulares, quando pedir y/n digite Y e de enter, se pedir Y/N/M/S ou algo do tipo digite Y e de enter, aí e só ir fazendo isso ate aparecer o qr code")
@@ -1118,7 +1118,7 @@ break
 					const gays5 = gay5[Math.floor(Math.random() * gay5.length)]
 					var porcentagemgay = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
 					const porcentagem = porcentagemgay[Math.floor(Math.random() * porcentagemgay.length)]
-					teks = `${pushname} Esses são os mais SuperGays do grupo ${groupName}\n@${gays1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n\n Sem pressão Neném, ⚡Xandão⚡ ta aqui`
+					teks = `${pushname} Esses são os mais SuperGays do grupo ${groupName}\n@${gays1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n\n Sem pressão Neném, ⚡Zenitsu⚡ ta aqui`
 					membr.push(gays1.jid)
 					membr.push(gays2.jid)
 					membr.push(gays3.jid)
@@ -1141,7 +1141,7 @@ break
 					const cornos5 = corno5[Math.floor(Math.random() * corno5.length)]
 					var porcentagemcorno = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `O chifre desse ai bate na lua ksksksk`]
 					const porcentagemc = porcentagemcorno[Math.floor(Math.random() * porcentagemcorno.length)]
-					teks = `${pushname} Esses são os cornos do grupo ${groupName}\n@${cornos1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n\n Sem pressão Neném, ⚡Xandão⚡ ta aqui`
+					teks = `${pushname} Esses são os cornos do grupo ${groupName}\n@${cornos1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${cornos5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n\n Sem pressão Neném, ⚡Zenitsu⚡ ta aqui`
 					membr.push(cornos1.jid)
 					membr.push(cornos2.jid)
 					membr.push(cornos3.jid)
@@ -1172,7 +1172,7 @@ break
                       const cuzao11 = cu11[Math.floor(Math.random() * cu11.length)]
                       const cuzin21 = cuz13[Math.floor(Math.random() * cuz13.length)]
                       const cuzin22 = cuz14[Math.floor(Math.random() * cuz14.length)]
-                      reply(`*${pushname2} Esses são os mais lindos do grupo\n${groupName}\n\n@554791347623\n@${cuzao11.jid.split('@')[0]} \n@${cuzao12.jid.split('@')[0]} \n@${cuzin21.jid.split('@')[0]} \n@${cuzin22.jid.split('@')[0]} \n\n Cortesia de NEZUKO BOT `)
+                      reply(`*${pushname2} Esses são os mais lindos do grupo\n${groupName}\n\n@554791347623\n@${cuzao11.jid.split('@')[0]} \n@${cuzao12.jid.split('@')[0]} \n@${cuzin21.jid.split('@')[0]} \n@${cuzin22.jid.split('@')[0]} \n\n Cortesia de Zenitsu BOT `)
                       membr.push(cu11.jid)
                       membr.push(cu12.jid)
                       membr.push(cuz13.jid)
