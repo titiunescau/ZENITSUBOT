@@ -1023,8 +1023,7 @@ ppUrl = await client.getProfilePicture(from)
 ppUrl = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 }
 buffer = await getBuffer(ppUrl)
-infogp = 
-` 
+infogp = `
   ‣Nome: ${groupName}
   ‣Quantidade de membros: ${groupMembers.length}
   ‣Total de administradores: ${groupAdmins.length}
