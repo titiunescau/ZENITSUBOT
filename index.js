@@ -4782,6 +4782,6 @@ break
 		{
 			console.log('Error : %s', color(e, 'red'))
 		}
-	})
+	}
 }
 starts()
