@@ -208,10 +208,10 @@ async function starts() {
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
 	client.on('connecting', () => {
-		start('2', 'Calma moh')
+		start('2', 'Calma baby')
 	})
 	client.on('open', () => {
-		success('2', 'Sem pressa neném')
+		success('2', 'espera baby')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -221,6 +221,21 @@ async function starts() {
 		try {
 			const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
+			if (!welkom.includes(anu.jid)) return
+                    try {
+                            const imgur = require('imgur')
+                num = anu.participants[0]
+                const mdata = await client.groupMetadata(anu.jid)
+                try {
+                    var pp_user = await client.getProfilePicture(num)
+                } catch (e) {
+                    var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+                }
+                exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
+                            exetwo = getRandom('.jpeg')
+                            fs.writeFileSync(exetwo, exeone, 'Base64')
+                            let psCAPA = await imgur.uploadFile(exetwo)
+                            fs.unlinkSync(exetwo)
 			 if (anu.action == 'add') {
                     ini_user = client.contacts[num]
                     ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
