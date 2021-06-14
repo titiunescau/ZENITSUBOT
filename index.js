@@ -272,7 +272,7 @@ if (!welkom.includes(anu.jid)) return
                         fs.unlinkSync(exetwo)
             if (anu.action == 'add') {
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
                 teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
 Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
  ⚡ ⚡Zenitsu⚡ ⚡ 
@@ -282,7 +282,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             }
             if (anu.action == 'remove') {
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
                 client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
                 } catch (e) {
