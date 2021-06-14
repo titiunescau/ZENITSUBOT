@@ -247,7 +247,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             }
             if (anu.action == 'remove') {
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%DO%&gpnome=${encodeURIComponent(mdata.subject)}&perfil=`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DE›%20REST%20API%27s`)
                 client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
                 } catch (e) {
