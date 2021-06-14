@@ -909,7 +909,8 @@ if (text.includes("placa"))
                             fs.unlinkSync(ran);
                         });
                             break
-					 case 'converter':
+				
+				case 'converter':
                         encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
                         media = await client.downloadAndSaveMediaMessage(encmedia);
                         ran = getRandom('.mp3');
@@ -3254,6 +3255,22 @@ break
 					client.sendMessage(from, nye, image, { caption: 'kurumi chan!!', quoted: mek })
 					await limitAdd(sender) 
 					break 
+					case 'play':
+					  if (args.length < 1) return reply('Cadê o nome da música krlh?')
+                reply('🔎 Procurando música, aguarde...🔎')
+                const play = body.slice(6)
+                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${play}`)
+                 infomp3 = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${anu.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗧𝗮𝗺𝗮𝗻𝗵𝗼:\n${anu.result.filesizeF}\n𝗗𝘂𝗿𝗮𝗰̧𝗮̃𝗼:\n${anu.duration} MIN\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
+║▌│█║▌│ █║▌│█│║▌║
+
+☣︎︎ Copyright ® Zenitsu 2021 ☣︎︎
+`
+if (anu.error) return reply(mess.error.play)
+                buffer = await getBuffer(anu.result.thumb)
+                lagu = await getBuffer(anu.result.dl_link)
+                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": `${anu.result.title}.mp3`, 'jpegThumbnail': await getBuffer(anu.result.thumb)}}}})
+                break
 				case 'miku':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+miku`, {method: 'get'})
@@ -4093,7 +4110,7 @@ break
 					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					me = client.user
 					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:*NEZUKO BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:*Zenitsu BOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* 🐊🚩\n*──────────────────*` , text, { quoted: mek, })
 					break
 					case 'dellvip':
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -4115,7 +4132,7 @@ break
 					break
 					case 'ichiadmin':
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
-					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT Nezuko ✨* 」\n*│+ wa.me/559887053394*╰──────*「 *✞Titiu Nescau✞︎* 」*────*\n\n*_SE QUER SER ADMIN DO BOT Nezuko_*\n*_Tipo /iklan_*' })
+					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT Zenitsu ✨* 」\n*│+ wa.me/559887053394*╰──────*「 *✞Titiu Nescau✞︎* 」*────*\n\n*_SE QUER SER ADMIN DO BOT Zenitsu_*\n*_Tipo /iklan_*' })
 					break
 				case 'iklan':
 					client.sendMessage(from, iklan(prefix) , text, { quoted: mek })
@@ -4124,7 +4141,7 @@ break
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/554792091566/*╰──────*「 *Titiu Nescau︎* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DOTitiu Nescau︎ BOT_*\n*_Ketik #daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/554792091566/*╰──────*「 *Titiu Nescau︎* 」*────*\n\n*_SE QUER SER UM USUÁRIO PREMIUM DO Titiu Nescau︎ BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
