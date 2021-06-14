@@ -254,7 +254,7 @@ async function starts() {
                     } catch (e) {
                             console.log('Error : %s', color(e, 'red'))
                     }
-    )
+    
 	/*client.on('group-participants-update', async (anu) => {
 if (!welkom.includes(anu.jid)) return
                 try {
