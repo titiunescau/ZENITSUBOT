@@ -221,17 +221,16 @@ async function starts() {
 		try {
 			const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
-			if (anu.action == 'add') {
-				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-				teks = `𝚘𝚕𝚊 𝚖𝚎𝚞 𝚌𝚊𝚛𝚘 𝚐𝚊𝚏𝚊𝚗𝚑𝚘𝚝𝚘@${num.split('@')[0]}\n𝚂𝚎𝚓𝚊 𝚋𝚎𝚖 𝚟𝚒𝚗𝚍𝚘 𝚊𝚘  *${groupName}*\n\n 𝚕𝚎𝚒𝚊 𝚊𝚜 𝚛𝚎𝚐𝚛𝚊𝚜 𝚜𝚎 𝚗ã𝚘 𝚓𝚊 𝚕𝚎𝚟𝚊 𝚘 𝚋𝚊𝚗️`
-				let buff = await getBuffer(ppimg)
-				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+			 if (anu.action == 'add') {
+                    ini_user = client.contacts[num]
+                    ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname2}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                    teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
+    Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
+    ⚡ ⚡Zenistu⚡ ⚡ 
+    ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
+                    group_info = await client.groupMetadata(anu.jid)
+                    client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+                }
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
