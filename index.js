@@ -3256,7 +3256,7 @@ break
 					await limitAdd(sender) 
 					break 
 					case 'play':
-					  if (args.length < 1) return reply('Cadê o nome da música krlh?')
+					  if (args.length < 1) return reply('Cadê o nome da música nenem?')
                 reply('🔎 Procurando música, aguarde...🔎')
                 const play = body.slice(6)
                 anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${play}`)
@@ -4066,7 +4066,7 @@ if (anu.error) return reply(mess.error.play)
 					}
 					break
 					case 'dado':    
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o Titiu Nescau  ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o Titiu Nescau  ou digite **Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					
 					kapankah = body.slice(1)
 					const elu =['1','2','3','4','5','6']
@@ -4101,7 +4101,7 @@ if (anu.error) return reply(mess.error.play)
 				case 'neko':
 					gatauda = body.slice(6)
 					reply(mess.wait)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nekonime?apikey=BotWeA`, {method: 'get'})
+					anu = await fetchJson(`https://api-exteam.herokuapp.com/api/textpro?tema=robot-text2d&apikey=APIKEY&text=EX-TEAM`)
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
                     await limitAdd(sender)
