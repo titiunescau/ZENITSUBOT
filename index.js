@@ -235,7 +235,7 @@ if (!welkom.includes(anu.jid)) return
                         fs.unlinkSync(exetwo)
             if (anu.action == 'add') {
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=EX%20TEAM&perfil=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20Ao%20NOSSO%20:%20${GroupName}%27s`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=EX%20TEAM&perfil=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20Ao%20NOSSO%20:%20${GroupName}`)
                 teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
 
 Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
@@ -247,7 +247,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             }
             if (anu.action == 'remove') {
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${GroupName}%27s`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${GroupName}`)
                 client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
                 } catch (e) {
