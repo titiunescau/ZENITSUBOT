@@ -250,7 +250,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             if (anu.action == 'remove') {
 	        const grupo = await client.groupMetadata(anu.jid)
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}perfil=${psCAPA.link}=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${encodeURIComponent(grupo.subject)}`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}perfil=${decodeURIComponent(PUXA CONST)}=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${encodeURIComponent(grupo.subject)}`)
                 client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
                 } catch (e) {
