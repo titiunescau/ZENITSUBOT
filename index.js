@@ -65,7 +65,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Titiu Nescau \n' // Seu nome
             + 'ORG:Lexa;\n' // Nome do Bot
-            + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 89 9887953394\n' // Numero do Whatsapp
+            + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 98 87053394\n' // Numero do Whatsapp
             + 'END:VCARD'
 prefix = '*'
 blocked = []
@@ -210,10 +210,10 @@ async function starts() {
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
 	client.on('connecting', () => {
-		start('2', 'Calma baby')
+		start('2', 'Calma cornin')
 	})
 	client.on('open', () => {
-		success('2', 'espera baby')
+		success('2', 'espera krai')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -1119,7 +1119,7 @@ break
 					mentions(teks, membr, true)
 						break
 				case 'install':
-			reply(`Aqui os comandos do ⚡ZRNITSU BOT⚡ ${pushname}`)
+			reply(`Aqui os comandos do ⚡ZENITSU BOT⚡ ${pushname}`)
 			setTimeout( () => {
 			client.sendMessage(from, Presence.composing)
 			reply("Você irá precisar do Termux instalado e dois celulares, quando pedir y/n digite Y e de enter, se pedir Y/N/M/S ou algo do tipo digite Y e de enter, aí e só ir fazendo isso ate aparecer o qr code")
@@ -1130,11 +1130,11 @@ break
 			}, 2000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
-				reply("pkg install git && pkg install ffmpeg && pkg install wget && pkg install nodejs && git clone https://github.com/titiunescau/Nezukobot")
+				reply("pkg install git && pkg install ffmpeg && pkg install wget && pkg install nodejs && git clone https://github.com/titiunescau/ZENITSUBOT")
 			}, 3000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
-				reply("cd Nezukobot")
+				reply("cd ZENITSUBOT")
 			}, 5000)
 			setTimeout( () => {
 				client.updatePresence(from, Presence.composing)
@@ -1626,11 +1626,11 @@ break
 						if (isAnime) return reply('O modo anime já está ativo')
 						anime.push(from)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`\`\`\`✓Ativado com sucesso o modo anime no grupo\`\`\` *${groupMetadata.subject}*`)
+						reply(`\`\`\`✓Ativado com sucesso o modo anime no grupo🥳\`\`\` *${groupMetadata.subject}*`)
 					} else if ((args[0]) === 'off') {
 						anime.splice(from, 1)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`\`\`\`✓Modo anime desativado com sucesso no grupo\`\`\` *${groupMetadata.subject}*`)
+						reply(`\`\`\`✓Modo anime desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
@@ -1660,7 +1660,7 @@ break
 						if (isNsfw) return reply('O modo nsfw já está ativo')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`\`\`\`✓Ativado com sucesso o modo nsfw no grupo\`\`\` *${groupName}*`)
+						reply(`\`\`\`✓Ativado com sucesso o modo nsfw no grupo🥳\`\`\` *${groupName}*`)
 					} else if ((args[0]) === 'off') {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
