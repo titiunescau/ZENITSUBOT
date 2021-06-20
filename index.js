@@ -344,7 +344,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
 					ownerB: 'Só o Titiu Nescau  pode usar esse comando bb',
 					userB: `──「 LISTA 」──\nOlá ${pushname} !\nVocê não esta registrado como amigo do meu dono então pessa para ele te adicionar como amigo\n\n──「 ⚡Zenitsu BOT ⚡ 」──`,
-					admin: 'Este comando só pode ser usado por administradores de grupo!',
+					admin: 'Este comando só pode ser usado pelos admins!',
 					Badmin: 'Este comando so pode ser usado quando o ⚡Zenitsu BOT ⚡ se torna ADM do grupo parsa',
 				}
 			}
@@ -2105,7 +2105,7 @@ break
                 await limitAdd(sender) 
                 break 
             case 'smule':
-					if (args.length < 1) return reply('Cadê o url mano?')
+					if (args.length < 1) return reply('Cadê o url man?')
 					if (!isUrl(args[0]) && !args[0].includes('c-ash.smule')) return reply(mess.error.Iv)
 					reply(mess.wait)
 					anu = await fetchJson(`https://mnazria.herokuapp.com/api/smule?link=${args[0]}`, {method: 'get'})
@@ -2136,7 +2136,7 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
 				    client.blockUser (`${body.slice(9)}@c.us`, "remove")
-					client.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
+					client.sendMessage(from, `Pedido recebido, desbloquear ${body.slice(9)}@c.us`, text)
 				    break
                 case 'image':
 					if (args.length < 1) return reply('O que você quer procurar, mano?')
