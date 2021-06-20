@@ -1,7 +1,7 @@
 const animelist = (prefix) => {
 
 	return `
- 💪🏻AQUI E A NEZUKO PORRA💪🏻
+ 💪🏻AQUI E O ZENITSU PORRA💪🏻
 
  ╭╮╮╱▔▔▔▔╲╭╭╮ 
  ╰╲╲▏▂╲╱▂▕╱╱╯
