@@ -938,6 +938,7 @@ if (text.includes("placa"))
                 amor = `${pushname} suas chances de ficar com @${mentidn.split('@')[0]} são de: ${am}%`
                 client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: amor, contextInfo: {mentionedJid: [mentidn]}})
 				break 
+					
 					case 'punheteiros':
       if (!isGroup) return reply(mess.only.group)
                         member = []
@@ -1200,7 +1201,16 @@ break
                   	client.sendMessage(from, hah, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek });
                   	fs.unlinkSync(ran);
                	   });
-               			break
+               			break 
+					client.on('CB:action,,battery', json => {
+		global.batteryLevelStr = json[2][0][1].value
+	   global.batterylevel = parseInt(batteryLevelStr)
+		baterai = batterylevel
+        if (json[2][0][1].live == 'true') charging = true
+       if (json[2][0][1].live == 'false') charging = false
+        console.log(json[2][0][1])
+		console.log(color('🔋Carga da bateria: ' + batterylevel+'%', "yellow"))
+	})
 					case 'kiss':
 				    try {    
 					
