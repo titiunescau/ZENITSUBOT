@@ -212,8 +212,18 @@ async function starts() {
 	client.on('connecting', () => {
 		start('2', 'Calma cornin')
 	})
+	
 	client.on('open', () => {
 		success('2', 'espera krai')
+	})
+	client.on('CB:action,,battery', json => {
+		global.batteryLevelStr = json[2][0][1].value
+	   global.batterylevel = parseInt(batteryLevelStr)
+		baterai = batterylevel
+        if (json[2][0][1].live == 'true') charging = true
+       if (json[2][0][1].live == 'false') charging = false
+        console.log(json[2][0][1])
+		console.log(color('🔋Carga da bateria: ' + batterylevel+'%', "yellow"))
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -1202,15 +1212,6 @@ break
                   	fs.unlinkSync(ran);
                	   });
                			break 
-					client.on('CB:action,,battery', json => {
-		global.batteryLevelStr = json[2][0][1].value
-	   global.batterylevel = parseInt(batteryLevelStr)
-		baterai = batterylevel
-        if (json[2][0][1].live == 'true') charging = true
-       if (json[2][0][1].live == 'false') charging = false
-        console.log(json[2][0][1])
-		console.log(color('🔋Carga da bateria: ' + batterylevel+'%', "yellow"))
-	})
 					case 'kiss':
 				    try {    
 					
