@@ -4413,7 +4413,7 @@ if (anu.error) return reply(mess.error.play)
 				case 'dono':
 					memein = await kagApi.memeindo()
 					buffer = await getBuffer(`https://i.ibb.co/XzYf83b/titiunescau-1.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*Criador da NEZUKO:Eae meu parsa, sou ꧁╰‿╯TITIU NESCAU ╰‿╯꧂ Pai  do toddy e sou criador do Bot NEZUKO BOT  \n*WPP:* wa.me/+559887053394\n\n\nEspero que tenham gostado do bot 💪\n*Kibadores vão se FUDER*️'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*Criador da ZENITSU:Eae meu parsa, sou ꧁╰‿╯TITIU NESCAU ╰‿╯꧂ Criador Bot ZENITSU BOT  \n*WP:* wa.me/+559887053394\n\n\nEspero que tenham gostado do bot 💪\n*Kibadores vão se FUDER*️'})
 					break
 				case 'dono2':
 					memein = await kagApi.memeindo()
