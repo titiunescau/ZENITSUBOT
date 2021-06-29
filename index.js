@@ -273,19 +273,23 @@ if (!welkom.includes(anu.jid)) return
                         fs.writeFileSync(exetwo, exeone, 'Base64')
                         let psCAPA = await imgur.uploadFile(exetwo)
                         fs.unlinkSync(exetwo)
-            if (anu.action == 'add') {
+             if (anu.action == 'add') {
+	        const grupo = await client.groupMetadata(anu.jid)
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?nome=${pushname}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20Ao%20NOSSO%20:%20${encodeURIComponent(grupo.subject)}`)
                 teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
+
 Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
- ⚡ ⚡Zenitsu⚡ ⚡ 
- ━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━`
+
+ ⚡ Zenitsu ⚡ `
                 group_info = await client.groupMetadata(anu.jid)
                 client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+
             }
             if (anu.action == 'remove') {
+	        const grupo = await client.groupMetadata(anu.jid)
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?nome=${pushname}&gpnome=${encodeURIComponent(mdata.subject)}&perfil=${psCAPA.link}&fundo=https://pt-static.z-dn.net/files/df9/e66f1513bca9d94fefdea96e5a5c59de.jpg`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}perfil=${decodeURIComponent(client.subject)}=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${encodeURIComponent(grupo.subject)}`)
                 client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
                 } catch (e) {
@@ -749,7 +753,7 @@ if (text.includes("placa"))
 	}
 			
 			
-		if (messagesC.includes("bot horrível")){
+		if (messagesC.includes("horrível")){
 			client.updatePresence(from, Presence.composing)
 			reply("karalho man")
 	}
@@ -916,7 +920,47 @@ if (text.includes("placa"))
                 const getFoto = setP[Math.floor(Math.random() * setP.length)]
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
-                  break
+                  break 
+					case 'amor':
+                if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
+				mentidn = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+                ghost = mek.participant
+                const mor =['22','40','45','100','98','99','12','5','0','67','88']
+				const am = mor[Math.floor(Math.random() * mor.length)]
+				rate = body.slice(1)		
+				var kic = `${sender.split("@")[0]}@s.whatsapp.net`		
+		     	 reply(`Fazendo probabilidades`)
+				 data = fs.readFileSync('./integraçao/shit.js');
+                 jsonData = JSON.parse(data);
+                 randIndex = Math.floor(Math.random() * jsonData.length);
+                 randKey = jsonData[randIndex];
+                buffer = await getBuffer(randKey.result)               
+                amor = `${pushname} suas chances de ficar com @${mentidn.split('@')[0]} são de: ${am}%`
+                client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: amor, contextInfo: {mentionedJid: [mentidn]}})
+				break 
+					case 'punheteiros':
+      if (!isGroup) return reply(mess.only.group)
+                        member = []
+                        const p1 = groupMembers
+                        const p2 = groupMembers
+                        const p3 = groupMembers
+                        const p4 = groupMembers
+                        const p5 = groupMembers
+                        const o1 = p1[Math.floor(Math.random() * p1.length)]
+                        const o2 = p2[Math.floor(Math.random() * p2.length)]
+                        const o3 = p3[Math.floor(Math.random() * p3.length)]
+                        const o4 = p4[Math.floor(Math.random() * p4.length)]
+                        const o5 = p5[Math.floor(Math.random() * p5.length)]
+                        teks = `
+                  *TOP CINCO ${body.slice(10)}\n\n@${o1.jid.split('@')[0]}👉👌\n\n\n2=👉👌@${o2.jid.split('@')[0]}👉👌\n\n\n3=👉👌@${o3.jid.split('@')[0]}👉👌\n\n\n4=👉👌@${o4.jid.split('@')[0]}👉👌\n\n\n5=👉👌@${o5.jid.split('@')[0]}👉👌\n\n\n👉👌ESSES SAO OS CINCO MAIS PUNHETEIROS DO GRUPO👉👌`
+                        member.push(o1.jid)
+                        member.push(o2.jid)
+                        member.push(o3.jid)
+                        member.push(o4.jid)
+                        member.push(o5.jid)
+                        mentions(teks, member, true)
+                                        break
+					
 					case 'revert':
                         encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
                         media = await client.downloadAndSaveMediaMessage(encmedia);
@@ -1025,7 +1069,7 @@ break
             client.sendMessage(from, figu2, sticker, {quoted: mek})
             		break
 		    case 'online':
-                    msgFilter.isFiltered(from)
+                    msgFiltered.isFiltered(from)
 		    let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
           	    let online = [...Object.keys(client.chats.get(ido).presences), client.user.jid]
 	            client.sendMessage(from, 'Lista de usuários online:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join`\n`, text, { quoted: mek,
@@ -1792,7 +1836,7 @@ break
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(8).trim()
-					anu = await fetchJson(`https://api-exteam.herokuapp.com/api/fun/emojiv2?emoji=%F0%9F%98%AD`, {method: 'get'})
+					anu = await fetchJson(`https://mhankbarbars.tech/api/emoji2png?emoji=${teks}&apikey=${BarBarKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -1801,6 +1845,8 @@ break
 						client.sendMessage(from, buffer, sticker)
 						fs.unlinkSync(rano)
 					})
+					break
+							
 					break
 				case 'firetext':
 					if (args.length < 1) return reply(mess.blank)
@@ -3857,7 +3903,7 @@ if (anu.error) return reply(mess.error.play)
 			    case 'fakereplay':
                    client.reply(from, 'ange mas', 'mending lari', "0816-5466368")
                    break
-				case 'infogc':
+				case 'infogp':
 				client.updatePresence(from, Presence.composing)
 				if (!isGroup) return reply(mess.only.group)
 					try {
