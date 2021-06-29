@@ -1792,7 +1792,7 @@ break
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(8).trim()
-					anu = await fetchJson(`https://mhankbarbars.tech/api/emoji2png?emoji=${teks}&apikey=${BarBarKey}`, {method: 'get'})
+					anu = await fetchJson(`https://api-exteam.herokuapp.com/api/fun/emojiv2?emoji=%F0%9F%98%AD`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
