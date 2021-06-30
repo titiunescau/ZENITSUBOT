@@ -3364,7 +3364,7 @@ break
 					  if (args.length < 1) return reply('Cadê o nome da música nenem?')
                 reply('🔎 Procurando música, aguarde...🔎')
                 const play = body.slice(6)
-                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${args[0]`)
+                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${args[0]}`)
                  infomp3 = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${site.result.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
 ║▌│█║▌│ █║▌│█│║▌║
 
