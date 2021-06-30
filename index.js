@@ -3230,13 +3230,13 @@ break
                    break
 					case 'usuarios':
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS ⚡NEZUKO BOT ⚡* 」\n\`\`\``
+					teks = `\`\`\`╭────*「 *TOTAL DE USUÁRIOS ⚡ZENITSU BOT ⚡* 」\n\`\`\``
 					no = 0
 					for (let hehehe of user) {
 						no += 1
 						teks += `\`\`\`[${no.toString()}]\`\`\` @${hehehe.split('@')[0]}\n`
 					}
-					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *⚡NEZUKO BOT ⚡* 」*────`
+					teks += `│+ Total de usuários : ${user.length}\n╰──────*「 *⚡ZENITSU BOT ⚡* 」*────`
 					 client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 				case 'desligar':
@@ -3363,9 +3363,9 @@ break
 					case 'play':
 					  if (args.length < 1) return reply('Cadê o nome da música nenem?')
                 reply('🔎 Procurando música, aguarde...🔎')
-                const play = body.slice(6)
-                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${args[0]}`)
-                 infomp3 = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${site.result.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
+		const play = body.slice(6)
+                site = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${args[0]}`)
+                 resu = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${site.result.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
 ║▌│█║▌│ █║▌│█│║▌║
 
 ☣︎︎ Copyright ® Zenitsu 2021 ☣︎︎`
