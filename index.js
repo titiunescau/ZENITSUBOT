@@ -3364,18 +3364,18 @@ break
 					  if (args.length < 1) return reply('Cadê o nome da música nenem?')
                 reply('🔎 Procurando música, aguarde...🔎')
                 const play = body.slice(6)
-                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${play}`)
-                 infomp3 = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${anu.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗧𝗮𝗺𝗮𝗻𝗵𝗼:\n${anu.result.filesizeF}\n𝗗𝘂𝗿𝗮𝗰̧𝗮̃𝗼:\n${anu.duration} MIN\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
+                anu = await fetchJson(`https://api-gdr2.herokuapp.com/api/ytplay?q=${args[0]`)
+                 infomp3 = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${anu.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${site.result.views}\n𝗟𝗶𝗻𝗸:\n${anu.url}\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
 ║▌│█║▌│ █║▌│█│║▌║
 
-☣︎︎ Copyright ® Zenitsu 2021 ☣︎︎
-`
+☣︎︎ Copyright ® Zenitsu 2021 ☣︎︎`
+
 if (anu.error) return reply(mess.error.play)
                 buffer = await getBuffer(anu.result.thumb)
                 lagu = await getBuffer(anu.result.dl_link)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": `${anu.result.title}.mp3`, 'jpegThumbnail': await getBuffer(anu.result.thumb)}}}})
-                break
+                client.sendMessage(from, image, {quoted: mek, caption: resu})
+                client.sendMessage(from, audioa, audio, {quoted:mek})
+					break
 				case 'miku':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+miku`, {method: 'get'})
