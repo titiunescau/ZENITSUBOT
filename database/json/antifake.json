@@ -1,1 +1,0 @@
-const antifake = JSON.parse(fs.readFileSync('./database/json/antifake.json'))
