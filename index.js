@@ -944,8 +944,6 @@ if (text.includes("placa"))
 				rate = body.slice(1)		
 				var kic = `${sender.split("@")[0]}@s.whatsapp.net`		
 		     	 reply(`Fazendo probabilidades`)
-				 data = fs.readFileSync('./integraçao/shit.js');
-                 jsonData = JSON.parse(data);
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
                 buffer = await getBuffer(randKey.result)               
