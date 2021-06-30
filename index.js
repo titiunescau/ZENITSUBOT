@@ -3370,10 +3370,10 @@ break
 
 ☣︎︎ Copyright ® Zenitsu 2021 ☣︎︎`
 
-if (anu.error) return reply(mess.error.play)
-                buffer = await getBuffer(anu.result.thumb)
-                lagu = await getBuffer(anu.result.dl_link)
-                client.sendMessage(from, image, {quoted: mek, caption: resu})
+if (site.error) return reply(mess.error.play)
+                imagem = await getBuffer(site.result.thumb)
+                audioa = await getBuffer(site.result.url)
+                client.sendMessage(from, imagem,image, {quoted: mek, caption: resu})
                 client.sendMessage(from, audioa, audio, {quoted:mek})
 					break
 				case 'miku':
