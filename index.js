@@ -965,6 +965,12 @@ case 'msg':
                 amor = `${pushname} suas chances de ficar com @${mentidn.split('@')[0]} são de: ${am}%`
                 client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: amor, contextInfo: {mentionedJid: [mentidn]}})
 				break 
+					case 'rr':
+                    rate = body.slice(1)
+                    ratee = ["Tac... Não disparou","Tac... Não disparou,ainda...","Tac💥 Disparou e você morreu","Tac💥Disparou mas a bala pegou de raspão","A arma falhou","Tac... Por pouco que não dispara...","Tac... A arma estava descarregada"]
+                    const cu = ratee[Math.floor(Math.random() * ratee.length)]
+                    client.sendMessage(from, ''+ cu+'', text, { quoted: mek })
+                    break
 					case 'roleta':
 const tiro = ["vazio","vazio","vazio","vazio","vazio","vazio","vazio","vazio","pow","pow"]
 const powf = ["roleta1","roleta2"]
