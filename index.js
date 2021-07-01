@@ -312,20 +312,6 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})  
-	client.on('group-participants-update', async (anu) => {
-const mdata = await client.groupMetadata(anu.jid)
-if(antifake.includes(anu.jid)) {
-if (anu.action == 'add'){
-num = anu.participants[0]
-if(!num.split('@')[0].startsWith(55)) {
-client.sendMessage(mdata.id, '🚫Neste Grupo e Proibido a Entrada De Números Fakes Ou Estrangeiros🚫Goodbye😕', MessageType.text)
-setTimeout(async function () {
-client.groupRemove(mdata.id, [num])
-					}, 1000)
-				}
-			}
-		}
-if (!welkom.includes(anu.jid)) return
 		
 	client.on('chat-update', async (mek) => {
 		try {
@@ -397,7 +383,6 @@ if (!welkom.includes(anu.jid)) return
 			const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : true
-			const isAntiFake = isGroup ? antifake.includes(from) : false
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
@@ -947,63 +932,7 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break 
-case 'msg':
-			if (isGroupMsg && isGroupAdmins || isGroupMsg && isOwner) {
-				if (args.length !== 1) return kill.reply(from, 'Você esqueceu de colocar se quer ativado [on], ou desativado [off].', id)
-				if (args[0] == 'on') {
-					faki.push(groupId)
-					fs.writeFileSync('./lib/config/fake.json', JSON.stringify(faki))
-					await kill.reply(from, 'Anti-Fakes habilitado.', id)
-				} else if (args[0] == 'off') {
-					faki.splice(groupId, 1)
-					fs.writeFileSync('./lib/config/fake.json', JSON.stringify(faki))
-					await kill.reply(from, 'Anti-fakes desabilitado.', id)
-				}
-            } else {
-                await kill.reply(from, mess.error.Ga, id)
-            }
-            break 
-					case 'antifake':
-
-					try {
-
-					if (!isGroup) return reply('So Em Grupos')
-
-					if (!isGroupAdmins) return reply('Somente Admins Membro Comum')
-
-					if (args.length < 1) return reply('Hmmmm')
-
-					if (Number(args[0]) === 1) {
-
-						if (isAntiFake) return reply('Ja esta ativo')
-
-						antifake.push(from)
-
-						fs.writeFileSync('./antifake/1', JSON.stringify(antifake))
-
-						reply('Ativou com sucesso o recurso de antifake neste grupo✔️')
-
-					} else if (Number(args[0]) === 0) {
-
-						antifake.splice(from, 1)
-
-						fs.writeFileSync('./antifake/1', JSON.stringify(antifake))
-
-						reply('Desativou com sucesso o recurso de antifake neste grupo✔️')
-
-					} else {
-
-						reply('1 para ativar, 0 para desativar')
-
-					}
-
-					} catch {
-
-						reply('Deu erro, tente novamente :/')
-
-					}
-
-                break
+					
 					case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
 				mentidn = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
