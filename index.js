@@ -927,7 +927,8 @@ if (text.includes("placa"))
 	            case 'menu':
 	            case 'help':
 	            	uptime = process.uptime ()
-                    var setP = [`https://i.ibb.co/YWsL78H/zenitsubot2.jpg`,`https://i.ibb.co/gzhxmPb/STK-20210604-WA0113.webp`]
+                   var setP = [`https://i.ibb.co/YWsL78H/zenitsubot2.jpg`]
+
                 const getFoto = setP[Math.floor(Math.random() * setP.length)]
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
