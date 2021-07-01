@@ -965,7 +965,30 @@ case 'msg':
                 amor = `${pushname} suas chances de ficar com @${mentidn.split('@')[0]} são de: ${am}%`
                 client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: amor, contextInfo: {mentionedJid: [mentidn]}})
 				break 
-					
+					case 'roleta':
+const tiro = ["vazio","vazio","vazio","vazio","vazio","vazio","vazio","vazio","pow","pow"]
+const powf = ["roleta1","roleta2"]
+tp = tiro[Math.floor(Math.random() * (tiro.length))]	
+tpp = powf[Math.floor(Math.random() * (powf.length))]	
+if (tp == 'vazio') {
+kill = 'Você teve sorte dessa vez, o tambor estava vazio.'
+} else if (tp == 'pow') {
+kill = 'Tinha uma bala no tambor, POW!'
+}
+kil = `${kill}`
+const tiru = fs.readFileSync('./teste/'+tpp+'.webp')
+if (kill == 'Tinha uma bala no tambor, POW!') {
+client.sendMessage(from, tiru, sticker, {quoted: mek})
+}
+client.sendMessage(from, kil, text, {quoted: mek})
+break
+				case 'attp2':
+					if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc Nescau*`)
+					teks = body.slice(6)
+					url = encodeURI(`http://brizas-api.herokuapp.com/ttp/attp2?apikey=brizaloka&text=${teks}`)
+					send = await getBuffer(url)
+					client.sendMessage(from, send, sticker, {quoted: mek})
+					   break
 					case 'punheteiros':
       if (!isGroup) return reply(mess.only.group)
                         member = []
