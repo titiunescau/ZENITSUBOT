@@ -46,7 +46,9 @@ const help = (prefix, sender, pushname, time) => {
 ╰───────────────────────────────╯
 
 ╭────「 COMANDOS NOVOS 」
-│               
+│
+┣⊱  *rr
+┣⊱  *amor 
 ┣⊱  *attp2
 ┣⊱  *punheteiros
 ┣⊱  *supergay
