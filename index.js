@@ -979,7 +979,7 @@ case 'msg':
 
 						antifake.push(from)
 
-						fs.writeFileSync('./src/antifake.json', JSON.stringify(antifake))
+						fs.writeFileSync('./antifake/1', JSON.stringify(antifake))
 
 						reply('Ativou com sucesso o recurso de antifake neste grupo✔️')
 
