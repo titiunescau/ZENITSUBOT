@@ -228,67 +228,44 @@ async function starts() {
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
-	client.on('group-participants-update', async (anu) => {
+           client.on('group-participants-update', async (anu) => {
 if (!welkom.includes(anu.jid)) return
+                try {
+                        const imgur = require('imgur')
+            num = anu.participants[0]
+            const mdata = await client.groupMetadata(anu.jid)
+            try {
+                var pp_user = await client.getProfilePicture(num)
+            } catch (e) {
+                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
+                        exetwo = getRandom('.jpeg')
+                        fs.writeFileSync(exetwo, exeone, 'Base64')
+                        let psCAPA = await imgur.uploadFile(exetwo)
+                        fs.unlinkSync(exetwo)
+             if (anu.action == 'add') {
+	        const grupo = await client.groupMetadata(anu.jid)
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=${pushname}&perfil=${psCAPA.link}=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20Ao%20NOSSO%20:%20${encodeURIComponent(grupo.subject)}`)
+                teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
 
-      try {
+Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
 
-         const mdata = await client.groupMetadata(anu.jid)
-
-         num = anu.participants[0]
-
-         console.log(anu)
-
-         ini_user = client.contacts[num]
-
-         namaewa = ini_user.notify
-
-         member = mdata.participants.length
-
-         try {
-
-               var ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
-
-            } catch {
-
-               var ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+ ⚡ Zenitsu ⚡ `
+                group_info = await client.groupMetadata(anu.jid)
+                client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 
             }
-
-        try {
-
-               var ppgc = await client.getProfilePicture(anu.jid)
-
-            } catch {
-
-               var ppgc = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-
+            if (anu.action == 'remove') {
+	        const grupo = await client.groupMetadata(anu.jid)
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}perfil=${decodeURIComponent(client.subject)}=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${encodeURIComponent(grupo.subject)}`)
+                client.sendMessage(anu.jid, ini_img, MessageType.image)
             }
-
-        shortpc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
-
-        shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppgc}`)
-\
-         if (anu.action == 'add') {
-
-         welcome = await getBuffer(`http://brizas-api.herokuapp.com/photomod/welcome?apikey=brizaloka&desc=2020&background=https://i.imgur.com/tVKFNFk.png&profileimg=${shortpc.data}&groupimg=${shortgc.data}&number=20&groupname=${encodeURIComponent(mdata.subject)}&name=${num.split('@')[0]}`)
-
-        client.sendMessage(mdata.id, welcome, MessageType.image, {contextInfo: {'mentionedid': [num]}})
-
-        } else if (anu.action == 'remove') {
-
-       welcomedois = await getBuffer(`http://brizas-api.herokuapp.com/photomod/v1/menu?apikey=brizaloka&profileimg=${shortpc.data}&background=https://i.imgur.com/tVKFNFk.png&description=volte nunca mais&title=ADEUS KKK&username=${num.split('@')[0]}`)
-
-       client.sendMessage(mdata.id, welcomedois, MessageType.image, {contextInfo: {'mentionedid': [num]}})
-
-}
-
-     } catch (e) {
-
-         console.log('Error : %s', color(e, 'red'))
-
-      }
-
+                } catch (e) {
+                        console.log('Error : %s', color(e, 'red'))
+                }
 })
 	/*client.on('group-participants-update', async (anu) => {
 if (!welkom.includes(anu.jid)) return
