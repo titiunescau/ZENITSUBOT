@@ -265,7 +265,7 @@ if (!welkom.includes(anu.jid)) return
 
             }
 
-        shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
+        shortpc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
 
         shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppgc}`)
 \
