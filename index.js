@@ -32,7 +32,7 @@ const { recognize } = require('./lib/ocr')
 const fs = require('fs')
 const anime = JSON.parse(fs.readFileSync('./database/json/anime.json'))
 const antiracismo = JSON.parse(fs.readFileSync('./database/json/antiracismo.json'))
-const antipalavrao = JSON.parse(fs.readFileSync('./database/json/antipalavrao.json'))
+const contrapalavrao = JSON.parse(fs.readFileSync('./database/json/antipalavrao.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -76,7 +76,7 @@ cr = '*Titiu Nescau *'
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
-const antipalavrao = JSON.parse(fs.readFileSync('./database/json/antipalavrao.json'))
+const contrapalavrao = JSON.parse(fs.readFileSync('./database/json/antipalavrao.json'))
 const event = JSON.parse(fs.readFileSync('./database/json/event.json'))
 const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
@@ -385,7 +385,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 			const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : true
-	    const isAntiPalavrao = isGroup ? antipalavrao.includes(from) : false
+	    const isContraPalavrao = isGroup ? contrapalavrao.includes(from) : false
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
@@ -495,7 +495,7 @@ if (text.includes("placa"))
  }		        
 			 if (messagesC.includes("caralho")){
 		if (!isGroup) return
-		if (!isAntipalavrao) return
+		if (!isContrapalavrao) return
 		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
@@ -1773,19 +1773,19 @@ break
 						reply('On para ativar, Off para desligar')
 					}
 					break 
-					case 'antipalavrao':
+					case 'contrapalavrao':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Hmmmm')
 					if ((args[0]) === 'on') {
-						if (isAntiRacismo) return reply('O modo antipalavrao já está ativo')
-						antipalavrao.push(from)
-						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(antipalavrao))
-						reply(`\`\`\`✓Ativado com sucesso o modo antipalavrao no grupo\`\`\` *${groupMetadata.subject}*`)
+						if (isContraPalavrao) return reply('O modo antipalavrao já está ativo')
+						contrapalavrao.push(from)
+						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(contrapalavrao))
+						reply(`\`\`\`✓Ativado com sucesso o modo contrapalavrao no grupo\`\`\` *${groupMetadata.subject}*`)
 					} else if ((args[0]) === 'off') {
-						antipalavrao.splice(from, 1)
-						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(antipalavrao))
-						reply(`\`\`\`✓Modo antipalavrao desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
+						contrapalavrao.splice(from, 1)
+						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(contrapalavrao))
+						reply(`\`\`\`✓Modo contrapalavrao desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
