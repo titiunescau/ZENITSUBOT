@@ -383,6 +383,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 			const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : true
+	    const isAntipalavrao = isGroup ? antipalavrao.includes(from) : false
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
@@ -490,6 +491,38 @@ if (text.includes("placa"))
   conn.sendMessage(id, hasil, MessageType.text); 
  })
  }		        
+			 if (messagesC.includes("caralho")){
+		if (!isGroup) return
+		if (!isAntipalavrao) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau seu boca suja ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 segundo")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
+		}, 0)
+	}
 
         if (messagesC.includes("preto")){
 		if (!isGroup) return
