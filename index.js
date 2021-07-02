@@ -265,10 +265,10 @@ if (!welkom.includes(anu.jid)) return
 
             }
 
-        shortpc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
+        shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppimg}`)
 
         shortgc = await axios.get(`https://tinyurl.com/api-create.php?url=${ppgc}`)
-
+\
          if (anu.action == 'add') {
 
          welcome = await getBuffer(`http://brizas-api.herokuapp.com/photomod/welcome?apikey=brizaloka&desc=2020&background=https://i.imgur.com/tVKFNFk.png&profileimg=${shortpc.data}&groupimg=${shortgc.data}&number=20&groupname=${encodeURIComponent(mdata.subject)}&name=${num.split('@')[0]}`)
