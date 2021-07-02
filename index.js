@@ -1772,6 +1772,23 @@ break
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
+					break 
+					case 'antipalavrao':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if ((args[0]) === 'on') {
+						if (isAntiRacismo) return reply('O modo antipalavrao já está ativo')
+						antipalavrao.push(from)
+						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(antipalavrao))
+						reply(`\`\`\`✓Ativado com sucesso o modo antipalavrao no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
+						antipalavrao.splice(from, 1)
+						fs.writeFileSync('./database/json/antipalavrao.json', JSON.stringify(antipalavrao))
+						reply(`\`\`\`✓Modo antipalavrao desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
+					} else {
+						reply('On para ativar, Off para desligar')
+					}
 					break
 				case 'modonsfw':
 					if (!isGroup) return reply(mess.only.group)
