@@ -226,10 +226,48 @@ async function starts() {
 		console.log(color('🔋Carga da bateria: ' + batterylevel+'%', "yellow"))
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t')) 
+	client.on('group-participants-update', async (anu) => {
+if (!welkom.includes(anu.jid)) return
+                try {
+                        const imgur = require('imgur')
+            num = anu.participants[0]
+            const mdata = await client.groupMetadata(anu.jid)
+            try {
+                var pp_user = await client.getProfilePicture(num)
+            } catch (e) {
+                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
+                        exetwo = getRandom('.jpeg')
+                        fs.writeFileSync(exetwo, exeone, 'Base64')
+                        let psCAPA = await imgur.uploadFile(exetwo)
+                        fs.unlinkSync(exetwo)
+             if (anu.action == 'add') {
+	        const grupo = await client.groupMetadata(anu.jid)
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=EX%20TEAM&perfil=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20AO%20:${encodeURIComponent(grupo.subject)}`)
+                teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
 
-          const _0x424d=['getProfilePicture','\x0a╔═══\x20❰\x20「\x20*REBAIXADO*\x20」❱\x20════\x0a║\x20*@','\x0a╔═══\x20❰\x20「\x20*PROMOVIDO*\x20」❱\x20════\x0a║\x20*@','22163dsyKXJ','Error\x20:\x20%s','\x0a║┣❥\x20*Your\x20Welcome🥳*\x0a╚════\x20⸨\x20*','remove','\x20JIAHAHA*\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a║┣❥\x20Nama\x20:\x20','193803soeuwy','includes','1614069378','\x0a║┣❥\x20Group\x20:\x20','357544cprvdf','504155ZCxPPh','groupMetadata','296396kceZew','&gcname=','\x0a║┣❥\x20*kasihaan\x20di\x20demote🤣*\x0a╚════\x20⸨\x20*','\x0a*😊\x20Espero\x20que\x20não se\x20arrependa️*','promote','&memcount=','\x0a║┣❥\x20Date\x20:\x20','https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg','subject','\x20intro*\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a║┣❥\x20Nick\x20:\x20\x0a║┣❥\x20Era\x20:\x0a║┣❥\x20Para se cadastrar: digite @rg\x20\x0a║┣❥\x20Menina/Menino?\x0a║┣❥\x20Data\x20:\x20','image','https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60','group-participants-update','422583bedVhc','B391837A58338BA8186C47E51FFDFD4A','Kntl','*Adeus*\x20@','action','sendMessage','split','\x0a╚════\x20⸨\x20*','506910MSFjwP','participants','notify','jid','add','length','&bg=','demote','\x0a╔═══\x20❰\x20「\x20BEM VINDO(A) \x20」❱\x20════\x0a║\x20*@','&pp=','*\x20⸩\x20═════','@c.us','_Welcome_','application/octet-stream','\x0a║┣❥\x20Período\x20:\x20','PENDENTE','\x20PARABÉNS🥳*\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a║┣❥\x20Nick\x20:\x20','contacts','PROMOVIDO','\x0a║┣❥\x20Hora\x20:\x20','http://hadi-api.herokuapp.com/api/card/goodbye?nama=','&descriminator='];function _0x6ae8(_0x299744,_0x33e8cc){_0x299744=_0x299744-0x18b;let _0x424d90=_0x424d[_0x299744];return _0x424d90;}const _0x13aac0=_0x6ae8;(function(_0xd4b121,_0xbe6893){const _0x139d7c=_0x6ae8;while(!![]){try{const _0x5a9372=parseInt(_0x139d7c(0x19c))+parseInt(_0x139d7c(0x19a))+-parseInt(_0x139d7c(0x1a9))+parseInt(_0x139d7c(0x1b1))+-parseInt(_0x139d7c(0x190))+-parseInt(_0x139d7c(0x195))+-parseInt(_0x139d7c(0x199));if(_0x5a9372===_0xbe6893)break;else _0xd4b121['push'](_0xd4b121['shift']());}catch(_0x3e6e62){_0xd4b121['push'](_0xd4b121['shift']());}}}(_0x424d,0x4c048),Manik['on'](_0x13aac0(0x1a8),async _0x4da65a=>{const _0xb5ca1b=_0x13aac0;if(!welkom[_0xb5ca1b(0x196)](_0x4da65a['jid']))return;try{mem=_0x4da65a[_0xb5ca1b(0x1b2)][0x0];try{var _0x49288b=await Manik[_0xb5ca1b(0x18d)](_0x4da65a[_0xb5ca1b(0x1b2)][0x0][_0xb5ca1b(0x1af)]('@')[0x0]+'@c.us');}catch(_0x4bf149){var _0x49288b=_0xb5ca1b(0x1a7);}if(_0x4da65a[_0xb5ca1b(0x1ad)]==_0xb5ca1b(0x1b5)){let _0x53c4e7=await Manik[_0xb5ca1b(0x19b)](_0x4da65a[_0xb5ca1b(0x1b4)]);memeg=_0x53c4e7[_0xb5ca1b(0x1b2)][_0xb5ca1b(0x1b6)],num=_0x4da65a[_0xb5ca1b(0x1b2)][0x0],anu_user=Manik[_0xb5ca1b(0x1c2)][mem],teks=_0xb5ca1b(0x1b9)+num[_0xb5ca1b(0x1af)]('@')[0x0]+_0xb5ca1b(0x1a5)+tampilTanggal+_0xb5ca1b(0x1c4)+tampilWaktu+_0xb5ca1b(0x1bf)+tampilHari+_0xb5ca1b(0x1b0)+NamaBot+_0xb5ca1b(0x1bb);let _0x58bc1b=await getBuffer('http://hadi-api.herokuapp.com/api/card/welcome?nama='+num['split']('@')[0x0]+_0xb5ca1b(0x18c)+memeg+_0xb5ca1b(0x1a1)+memeg+_0xb5ca1b(0x19d)+encodeURI(_0x53c4e7['subject'])+_0xb5ca1b(0x1ba)+_0x49288b+_0xb5ca1b(0x1b7)+imgibb);Manik['sendMessage'](_0x53c4e7['id'],_0x58bc1b,MessageType[_0xb5ca1b(0x1a6)],{'caption':teks,'contextInfo':{'mentionedJid':[num]}});}if(_0x4da65a[_0xb5ca1b(0x1ad)]==_0xb5ca1b(0x193)){let _0x1eaa56=await Manik['groupMetadata'](_0x4da65a[_0xb5ca1b(0x1b4)]);num=_0x4da65a[_0xb5ca1b(0x1b2)][0x0],anu_user=Manik['contacts'][mem],memeg=_0x1eaa56[_0xb5ca1b(0x1b2)][_0xb5ca1b(0x1b6)],out=_0xb5ca1b(0x1ac)+num[_0xb5ca1b(0x1af)]('@')[0x0]+_0xb5ca1b(0x19f);let _0x2007d0=await getBuffer(_0xb5ca1b(0x18b)+anu_user['notify']+_0xb5ca1b(0x18c)+memeg+_0xb5ca1b(0x1a1)+memeg+_0xb5ca1b(0x19d)+encodeURI(_0x1eaa56[_0xb5ca1b(0x1a4)])+_0xb5ca1b(0x1ba)+_0x49288b+_0xb5ca1b(0x1b7)+imgibb);Manik['sendMessage'](_0x1eaa56['id'],_0x2007d0,MessageType[_0xb5ca1b(0x1a6)],{'caption':out,'contextInfo':{'mentionedJid':[num]}});}else{if(_0x4da65a[_0xb5ca1b(0x1ad)]==_0xb5ca1b(0x1a0)){const _0x49e044=await Manik['groupMetadata'](_0x4da65a['jid']);num=_0x4da65a['participants'][0x0],anu_user=Manik[_0xb5ca1b(0x1c2)][mem],memeg=_0x49e044[_0xb5ca1b(0x1b2)]['length'];try{ppimg=await Manik[_0xb5ca1b(0x18d)](_0x4da65a[_0xb5ca1b(0x1b2)][0x0][_0xb5ca1b(0x1af)]('@')[0x0]+_0xb5ca1b(0x1bc));}catch{ppimg='https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg';}let _0x15a0b5=await getBuffer(ppimg);teks=_0xb5ca1b(0x18f)+num[_0xb5ca1b(0x1af)]('@')[0x0]+_0xb5ca1b(0x1c1)+anu_user[_0xb5ca1b(0x1b3)]+_0xb5ca1b(0x1a2)+tampilTanggal+_0xb5ca1b(0x198)+_0x49e044[_0xb5ca1b(0x1a4)]+_0xb5ca1b(0x192)+NamaBot+_0xb5ca1b(0x1bb),Manik[_0xb5ca1b(0x1ae)](_0x49e044['id'],_0x15a0b5,MessageType[_0xb5ca1b(0x1a6)],{'caption':teks,'contextInfo':{'mentionedJid':[num]},'quoted':{'key':{'participant':''+numbernye,'remoteJid':_0xb5ca1b(0x1ab),'fromMe':![],'id':_0xb5ca1b(0x1aa)},'message':{'documentMessage':{'jpegThumbnail':_0x15a0b5,'mimetype':_0xb5ca1b(0x1be),'title':_0xb5ca1b(0x1c3),'fileLength':'36','pageCount':0x0,'fileName':_0xb5ca1b(0x1bd)}},'messageTimestamp':_0xb5ca1b(0x197),'status':_0xb5ca1b(0x1c0)}});}else{if(_0x4da65a[_0xb5ca1b(0x1ad)]==_0xb5ca1b(0x1b8)){let _0x580663=await Manik[_0xb5ca1b(0x19b)](_0x4da65a[_0xb5ca1b(0x1b4)]);num=_0x4da65a['participants'][0x0],anu_user=Manik[_0xb5ca1b(0x1c2)][mem],memeg=_0x580663[_0xb5ca1b(0x1b2)][_0xb5ca1b(0x1b6)];try{ppimg=await Manik['getProfilePicture'](_0x4da65a[_0xb5ca1b(0x1b2)][0x0][_0xb5ca1b(0x1af)]('@')[0x0]+_0xb5ca1b(0x1bc));}catch{ppimg=_0xb5ca1b(0x1a3);}let _0x2a8b52=await getBuffer(ppimg);teks=_0xb5ca1b(0x18e)+num['split']('@')[0x0]+_0xb5ca1b(0x194)+anu_user[_0xb5ca1b(0x1b3)]+'\x0a║┣❥\x20Date\x20:\x20'+tampilTanggal+_0xb5ca1b(0x198)+_0x580663[_0xb5ca1b(0x1a4)]+_0xb5ca1b(0x19e)+NamaBot+_0xb5ca1b(0x1bb),Manik[_0xb5ca1b(0x1ae)](_0x580663['id'],_0x2a8b52,MessageType['image'],{'caption':teks,'contextInfo':{'mentionedJid':[num]},'quoted':{'key':{'participant':''+numbernye,'remoteJid':_0xb5ca1b(0x1ab),'fromMe':![],'id':_0xb5ca1b(0x1aa)},'message':{'documentMessage':{'jpegThumbnail':_0x2a8b52,'mimetype':'application/octet-stream','title':_0xb5ca1b(0x1c3),'fileLength':'36','pageCount':0x0,'fileName':'_Welcome_'}},'messageTimestamp':_0xb5ca1b(0x197),'status':_0xb5ca1b(0x1c0)}});}}}}catch(_0x2af357){console['log'](_0xb5ca1b(0x191),color(_0x2af357,'red'));}})); 
+Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido 
 
+ ⚡ Zenitsu ⚡ `
+                group_info = await client.groupMetadata(anu.jid)
+                client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+
+            }
+            if (anu.action == 'remove') {
+	        const grupo = await client.groupMetadata(anu.jid)
+                ini_user = client.contacts[num]
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=${pushname}perfil=${decodeURIComponent(client.subject)}=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20${encodeURIComponent(grupo.subject)}`)
+                client.sendMessage(anu.jid, ini_img, MessageType.image)
+            }
+                } catch (e) {
+                        console.log('Error : %s', color(e, 'red'))
+                }
+})
+
+         
 	/*client.on('group-participants-update', async (anu) => {
 if (!welkom.includes(anu.jid)) return
                 try {
