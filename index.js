@@ -3400,9 +3400,9 @@ break
 
 if (site.error) return reply(mess.error.play)
                 imagem = await getBuffer(site.result.thumb)
-                audioa = await getBuffer(site.result.url)
+                audiou = await getBuffer(site.result.url)
                 client.sendMessage(from, imagem,image, {quoted: mek, caption: resu})
-                client.sendMessage(from, audioa, audio, {quoted:mek})
+                client.sendMessage(from, audiou, audio, {quoted:mek, caption: resu})
 					break
 				case 'miku':
 					reply(mess.wait)
