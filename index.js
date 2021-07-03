@@ -31,6 +31,7 @@ const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
 const fs = require('fs')
 const anime = JSON.parse(fs.readFileSync('./database/json/anime.json'))
+const antishit = JSON.parse(fs.readFileSync('./database/json/antishit.json'))
 const antiracismo = JSON.parse(fs.readFileSync('./database/json/antiracismo.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const moment = require('moment-timezone')
@@ -387,6 +388,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
+		const isAntiShit = isGroup ? antishit.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isPremium = premium.includes(sender)
@@ -491,6 +493,38 @@ if (text.includes("placa"))
   conn.sendMessage(id, hasil, MessageType.text); 
  })
  }		        
+			if (messagesC.includes("krlh")){
+		if (!isGroup) return
+		if (!isAntiShit) return
+		if (isGroupAdmins) return reply('cara, nao fale essas coisas, é errado, mas vc e admin n irei te banir ,mas se fizer novamente eu dou ban')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`tchau seu boca suja  ${sender.split("@")[0]} voce sera expulso deste grupo em 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("Nesse grupo, não gostamos de bocas sujas, que isso sirva de exemplo 🚶")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2 segundos")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3 segundos")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4 segundos")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5 segundo KKKKKKKK tchau otário 🤙")
+		}, 0)
+	}
 
         if (messagesC.includes("preto")){
 		if (!isGroup) return
@@ -1735,6 +1769,23 @@ break
 						antiracismo.splice(from, 1)
 						fs.writeFileSync('./database/json/antiracismo.json', JSON.stringify(antiracismo))
 						reply(`\`\`\`✓Modo antiracismo desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
+					} else {
+						reply('On para ativar, Off para desligar')
+					}
+					break  
+					case 'antishit':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if ((args[0]) === 'on') {
+						if (isAntiShit) return reply('O modo antishit já está ativo')
+						antishit.push(from)
+						fs.writeFileSync('./database/json/antishit.json', JSON.stringify(antishit))
+						reply(`\`\`\`✓Ativado com sucesso o modo antishit no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
+						antishit.splice(from, 1)
+						fs.writeFileSync('./database/json/antishit.json', JSON.stringify(antishit))
+						reply(`\`\`\`✓Modo antishit desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
 					} else {
 						reply('On para ativar, Off para desligar')
 					}
