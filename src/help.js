@@ -2,10 +2,10 @@ const help = (prefix, sender, pushname, time) => {
 
 	return `
  <══════════════════>
-       *ZENITSU BOT*
+     *ZENITSU BOT*
  <══════════════════>
  
-╭╮╮╱▔▔▔▔╲╭╭╮ 
+ ╭╮╮╱▔▔▔▔╲╭╭╮ 
  ╰╲╲▏▂╲╱▂▕╱╱╯
  ┈┈╲▏▇▏▕▇▕╱┈┈
  ┈┈╱╲▔▕▍▔╱╲┈┈ 
