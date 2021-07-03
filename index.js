@@ -246,7 +246,7 @@ if (!welkom.includes(anu.jid)) return
              if (anu.action == 'add') {
 	        const grupo = await client.groupMetadata(anu.jid)
                 ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=${groupMetadata.participants}&perfil=${psCAPA.link}=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20AO%20:${encodeURIComponent(grupo.subject)}`)
+                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=${client.groupMetadata(anu.jid)}&perfil=${client.getProfilePicture(num)}=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20AO%20:${encodeURIComponent(grupo.subject)}`)
                 teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
 
 Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
