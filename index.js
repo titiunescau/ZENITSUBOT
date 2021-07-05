@@ -374,8 +374,8 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 			const ownerNumber = ["559887053394@s.whatsapp.net"] // Coloque o seu numero
 			const mod = [ownerNumber,"559887053394@s.whatsapp.net"]// Moderador do bot
 			const adminbotnumber = ["559887053394@s.whatsapp.net"]// Número adm do bot
-			const frendsowner = ["559887053394@s.whatsapp.net"]// Amigo do criador 
-			const premium = ["559887053394@s.whatsapp.net",]
+			const frendsowner = ["559887053394@s.whatsapp.net","]// Amigo do criador 
+			const premium = ["559887053394@s.whatsapp.net","5514669262192@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
