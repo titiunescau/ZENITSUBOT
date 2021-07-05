@@ -229,45 +229,44 @@ async function starts() {
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t')) 
 	client.on('group-participants-update', async (anu) => {
+try {
+const grupo = await client.groupMetadata(anu.jid)
+if (anu.action == 'add') {
+const grupo = await client.groupMetadata(anu.jid)
 if (!welkom.includes(anu.jid)) return
-                try {
-                        const imgur = require('imgur')
-            num = anu.participants[0]
-            const mdata = await client.groupMetadata(anu.jid)
-            try {
-                var pp_user = await client.getProfilePicture(num)
-            } catch (e) {
-                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
-            }
-            exeone = await imageToBase64(JSON.stringify(pp_user).replace(/\"/gi, ''))
-                        exetwo = getRandom('.jpeg')
-                        fs.writeFileSync(exetwo, exeone, 'Base64')
-                        let psCAPA = await imgur.uploadFile(exetwo)
-                        fs.unlinkSync(exetwo)
-             if (anu.action == 'add') {
-	        const grupo = await client.groupMetadata(anu.jid)
-                ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=BEM%20VINDO(A)&nome=${num.split('@')[0]}&perfil=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=BEM%20VINDO%20AO%20GRUPO:${encodeURIComponent(grupo.subject)}`)
-                teks = `━━━━━━❰⊰❰⊰✾⊱❱⊱❱━━━━━━
-
-Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
-
- ⚡ Zenitsu ⚡ `
-                group_info = await client.groupMetadata(anu.jid)
-                client.sendMessage(anu.jid, ini_img, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-
-            }
-            if (anu.action == 'remove') {
-	        const grupo = await client.groupMetadata(anu.jid)
-                ini_user = client.contacts[num]
-                ini_img = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=ADEUS&nome=nescau%20sexo&perfil=https://i.imgur.com/mEGIfin.png&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=SAIU%20DO%20GRUPO:${encodeURIComponent(grupo.subject)}`)
-                client.sendMessage(anu.jid, ini_img, MessageType.image)
-            }
-                } catch (e) {
-                        console.log('Error : %s', color(e, 'red'))
-                }
-})
-
+num = anu.participants[0]
+try {
+capa = await client.getProfilePicture(num)
+} catch {
+capa = 'https://i.imgur.com/DUzsRhs.jpg'
+}
+exe1 = await getBuffer(capa)
+exe2 = await imageToBase64(JSON.stringify(capa).replace(/\"/gi, ''))
+fs.writeFileSync('exeFT.jpeg', exe2, 'base64')
+var imgbb = require('imgbb-uploader')
+data = await imgbb("cedeb44b8d204947a6833ca1412ca77d", 'exeFT.jpeg')
+buffu = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=OLA MEMBRO&nome=${num.split('@')[0]}&perfil=${data.display_url}&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=Você está no Grupo: ${encodeURIComponent(grupo.subject)}`)
+client.sendMessage(grupo.id, buffu, MessageType.image, {contextInfo: {mentionedJid: [num]}})
+} else if (anu.action == 'remove') {
+if (!welkom.includes(anu.jid)) return
+const grupo = await client.groupMetadata(anu.jid)
+num = anu.participants[0]
+try {
+capa = await client.getProfilePicture(num)
+} catch {
+capa = 'https://i.imgur.com/DUzsRhs.jpg'
+}
+let exe1 = await getBuffer(capa)
+exe2 = await imageToBase64(JSON.stringify(capa).replace(/\"/gi, ''))
+fs.writeFileSync('exeFT.jpeg', exe2, 'base64')
+var imgbb = require('imgbb-uploader')
+data = await imgbb("cedeb44b8d204947a6833ca1412ca77d", 'exeFT.jpeg')
+buffu = await getBuffer(`https://api-exteam.herokuapp.com/api/goodbye?titulo=JÁ ERA HORA&nome=${num.split('@')[0]}&perfil=${data.display_url}&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=Saiu de: ${encodeURIComponent(grupo.subject)}`)
+client.sendMessage(grupo.id, buffu, MessageType.image, {contextInfo: {mentionedJid: [num]}})
+}
+} catch (e) {
+console.log('Erro : %s', color(e, 'red'))
+}})
          
 	/*client.on('group-participants-update', async (anu) => {
 if (!welkom.includes(anu.jid)) return
