@@ -245,7 +245,7 @@ exe2 = await imageToBase64(JSON.stringify(capa).replace(/\"/gi, ''))
 fs.writeFileSync('exeFT.jpeg', exe2, 'base64')
 var imgbb = require('imgbb-uploader')
 data = await imgbb("cedeb44b8d204947a6833ca1412ca77d", 'exeFT.jpeg')
-buffu = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=OLA MEMBRO&nome=${num.split('@')[0]}&perfil=${data.display_url}&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=Você está no Grupo: ${encodeURIComponent(grupo.subject)}`)
+buffu = await getBuffer(`https://api-exteam.herokuapp.com/api/welcome?titulo=SEJA BEM VINDO&nome=${num.split('@')[0]}&perfil=${data.display_url}&fundo=https://i.imgur.com/fbs4CDb.jpg&grupo=Você está no Grupo: ${encodeURIComponent(grupo.subject)}`)
 client.sendMessage(grupo.id, buffu, MessageType.image, {contextInfo: {mentionedJid: [num]}})
 } else if (anu.action == 'remove') {
 if (!welkom.includes(anu.jid)) return
