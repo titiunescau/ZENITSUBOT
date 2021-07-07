@@ -68,7 +68,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nome do Bot
             + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 98 87053394\n' // Numero do Whatsapp
             + 'END:VCARD'
-prefix = '*'
+prefix = '*','/','!','.','#
 blocked = []
 limitawal = '999999999'
 cr = '*Titiu Nescau *'
@@ -958,11 +958,35 @@ if (text.includes("placa"))
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
 			reply("Teu pai")
+	} 
+			if (messagesC.includes("bom\ndia")){
+			client.updatePresence(from, Presence.composing)
+			reply("bom dia amigo(a)")
+	} 
+			if (messagesC.includes("boa\ntarde")){
+			client.updatePresence(from, Presence.composing)
+			reply("boa")
+	} 
+			if (messagesC.includes("!menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("se não for, coloque novamente")
+	} 
+			if (messagesC.includes(".menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("se não for, coloque novamente")
+	} 
+			if (messagesC.includes("#menu")){
+			client.updatePresence(from, Presence.composing)
+			reply("se não for, coloque novamente")
 	}
 	
 		if (messagesC.includes("corno")){
 			client.updatePresence(from, Presence.composing)
 			reply("Vsfd seu merda")
+	} 
+			if (messagesC.includes("bct")){
+			client.updatePresence(from, Presence.composing)
+			reply("amoo")
 	}
 
 		if (messagesC.includes("Lixo")){
@@ -2589,6 +2613,14 @@ break
 					break 
 case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break 
+case 'rodeo':
+tujuh = fs.readFileSync('./assets/rodeo.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break 
+case 'holiday':
+tujuh = fs.readFileSync('./assets/holiday.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'tropa':
