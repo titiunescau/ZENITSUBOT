@@ -978,7 +978,7 @@ if (text.includes("placa"))
 			if (messagesC.includes("#menu")){
 			client.updatePresence(from, Presence.composing)
 			reply("se não for, coloque novamente")
-	}
+	}*/
 	
 		if (messagesC.includes("corno")){
 			client.updatePresence(from, Presence.composing)
