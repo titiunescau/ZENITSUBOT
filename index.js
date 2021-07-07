@@ -68,7 +68,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nome do Bot
             + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 98 87053394\n' // Numero do Whatsapp
             + 'END:VCARD'
-prefix = '*','/
+prefix = '*''/
 blocked = []
 limitawal = '999999999'
 cr = '*Titiu Nescau *'
