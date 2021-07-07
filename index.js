@@ -68,7 +68,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG:Lexa;\n' // Nome do Bot
             + 'TEL;type=CELL;type=VOICE;waid=559887053394:+55 98 87053394\n' // Numero do Whatsapp
             + 'END:VCARD'
-prefix = '*','/','!','.','#'
+prefix = '*'
 blocked = []
 limitawal = '999999999'
 cr = '*Titiu Nescau *'
@@ -959,26 +959,15 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing)
 			reply("Teu pai")
 	} 
-			if (messagesC.includes("bom\ndia")){
+			if (messagesC.includes("bom dia")){
 			client.updatePresence(from, Presence.composing)
 			reply("bom dia amigo(a)")
 	} 
-			if (messagesC.includes("boa\ntarde")){
+			if (messagesC.includes("boa tarde")){
 			client.updatePresence(from, Presence.composing)
 			reply("boa")
 	} 
-			if (messagesC.includes("!menu")){
-			client.updatePresence(from, Presence.composing)
-			reply("se não for, coloque novamente")
-	} 
-			if (messagesC.includes(".menu")){
-			client.updatePresence(from, Presence.composing)
-			reply("se não for, coloque novamente")
-	} 
-			if (messagesC.includes("#menu")){
-			client.updatePresence(from, Presence.composing)
-			reply("se não for, coloque novamente")
-	}*/
+			
 	
 		if (messagesC.includes("corno")){
 			client.updatePresence(from, Presence.composing)
@@ -1258,7 +1247,7 @@ break
                         member.push(o4.jid)
                         member.push(o5.jid)
                         mentions(teks, member, true)
-                                        break
+                                        break 
 					
 					case 'revert':
                         encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo;
@@ -1579,6 +1568,29 @@ break
 					membr.push(cornos3.jid)
 					membr.push(cornos4.jid)
 					membr.push(cornos5.jid)
+					mentions(teks, membr, true)
+					break 
+					case 'gados':
+					if (!isGroup) return reply(`Esse comando so pode ser usadoem grupos bb`)
+					membr = []
+					const gado1 = groupMembers
+					const gado2 = groupMembers
+					const gado3 = groupMembers
+					const gado4 = groupMembers
+					const gado5 = groupMembers
+					const gados1 = gado1[Math.floor(Math.random() * gado1.length)]
+					const gados2 = gado2[Math.floor(Math.random() * gado2.length)]
+					const gados3 = gado3[Math.floor(Math.random() * gado3.length)]
+					const gados4 = gado4[Math.floor(Math.random() * gado4.length)]
+					const gados5 = gado5[Math.floor(Math.random() * gado5.length)]
+					var porcentagemdegado = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `10O chifre desse ai bate na lua ksksksk`]
+					const porcentagemd = porcentagemdegado[Math.floor(Math.random() * porcentagemdegado.length)]
+					teks = `${pushname} Esses são os mais gados do grupo ${groupName}\n@${gados1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${gados2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${gados3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${gados4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n@${gados5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagemc}\n\n Sem pressão Neném, ⚡Zenitsu⚡ ta aqui`
+					membr.push(gados1.jid)
+					membr.push(gados2.jid)
+					membr.push(gados3.jid)
+					membr.push(gados4.jid)
+					membr.push(gados5.jid)
 					mentions(teks, membr, true)
 					break
                     case 'gostosa':
@@ -2615,6 +2627,22 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break 
+case 'beggin':
+tujuh = fs.readFileSync('./assets/beggin.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break  
+case 'fedup':
+tujuh = fs.readFileSync('./assets/fedup.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break 		
+case 'cria':
+tujuh = fs.readFileSync('./assets/cria.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})					
+break					
+case 'fair':
+tujuh = fs.readFileSync('./assets/fair.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break					
 case 'rodeo':
 tujuh = fs.readFileSync('./assets/rodeo.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
