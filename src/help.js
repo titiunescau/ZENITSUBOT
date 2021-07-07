@@ -229,7 +229,11 @@ const help = (prefix, sender, pushname, time) => {
 │                      
 ╰──────────────────╯
 ╭──「 COMANDOS DE VOZ 」─
-│  
+│ 
+┣⊱  **fedup*
+┣⊱  **cria*
+┣⊱  **beggin
+┣⊱  **fair*
 ┣⊱  **rodeo*
 ┣⊱  **holiday*
 ┣⊱  **ola*                        
