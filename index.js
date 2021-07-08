@@ -1078,6 +1078,26 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/gay.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
+    } 
+			if (messagesC.includes("cringe")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/cringe.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    } 
+			if (messagesC.includes("obg")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/obgbot.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    } 
+			if (messagesC.includes("sera?")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/sera.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    } 
+			if (messagesC.includes("taporra")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/taporra.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
     }
           if (messagesC.includes("kkkkkk")){
 			client.updatePresence(from, Presence.composing) 
