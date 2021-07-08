@@ -1192,7 +1192,7 @@ if (text.includes("placa"))
 	            case 'menu':
 	            case 'help':
 	            	uptime = process.uptime ()
-                   var setP = [`https://i.ibb.co/YWsL78H/zenitsubot2.jpg`]
+                   var setP = [`https://i.ibb.co/fQPt9vv/Zenitsu-agatsuma.jpg`]
 
                 const getFoto = setP[Math.floor(Math.random() * setP.length)]
                 const nescau = await getBuffer(getFoto)
