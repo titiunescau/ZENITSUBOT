@@ -1204,7 +1204,7 @@ if (text.includes("placa"))
                 const isCharging = await bocchi.getIsPlugged()
                 const timestamp = speed();
                 const latensi = speed() - timestamp
-                await reply(from,「 CELULAR DO BOT 」*\n${(`\n*Bateria*: ${battery}% ${isCharging ? 'Na Tomada...' : 'Fora da tomada...'}`)}\n\n*Speed:* ${latensi.toFixed(4)} _Segundos_`, id)	
+                await reply(from,'「 CELULAR DO BOT 」*\n${(`\n*Bateria*: ${battery}% ${isCharging ? 'Na Tomada...' : 'Fora da tomada...'}`)}\n\n*Speed:* ${latensi.toFixed(4)} _Segundos_`, id)	
 			break		
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
