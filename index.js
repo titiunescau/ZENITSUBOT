@@ -1200,7 +1200,7 @@ if (text.includes("placa"))
                   break  
 			
 					 case 'lesbian':
-			if (isGroupMsg && !isNsfw) return await kill.reply(from, mess.gpadulto(), id)
+			if (!isGroup && !isNsfw) return await kill.reply(from, mess.gpadulto(), id)
             const lesb = await axios.get('https://meme-api.herokuapp.com/gimme/lesbians')
             await kill.sendFileFromUrl(from, `${lesb.data.url}`, '', `${lesb.data.title}`, id)
             break
