@@ -1208,9 +1208,9 @@ if (text.includes("placa"))
                   break  
 		 
 			case 'light':
-			if (args.length == 0) return await kill.reply(from, mess.noargs() + 'palavras/words/números/numbers.', id)
-			if (arks.length >= 16) return await kill.reply(from, 'Max: 10 letras/letters.', id)
-			await kill.reply(from, mess.wait() + '\n\n20+ s.', id)
+			if (args.length == 0) return await client.reply(from, mess.noargs() + 'palavras/words/números/numbers.', id)
+			if (arks.length >= 16) return await client.reply(from, 'Max: 10 letras/letters.', id)
+			await client.reply(from, mess.wait() + '\n\n20+ s.', id)
 			const browserlg = await puppeteer.launch(options)
 			const pagelg = await browserlg.newPage()
 			await pagelg.goto("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", { waitUntil: "networkidle2", timeout: 0 }).then(async () => {
@@ -1220,7 +1220,7 @@ if (text.includes("placa"))
 				await sleep(10000) // Aumente se sua conexão for superr lenta
 				await pagelg.waitForSelector('div[class="thumbnail"] > img')
 				const divElement = await pagelg.$eval('div[class="thumbnail"] > img', txLogo => txLogo.src)
-				await kill.sendFileFromUrl(from, divElement, 'light.jpg', '', id)
+				await client.sendFileFromUrl(from, divElement, 'light.jpg', '', id)
 				await browserlg.close()
 			})
 			break
