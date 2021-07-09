@@ -1201,21 +1201,21 @@ if (text.includes("placa"))
 			
 					   case 'antiporn':
 			if (isGroup && isGroupAdmins || isGroup && isOwner) {
-				if (args.length !== 1) return await kill.reply(from, mess.onoff(), id)
+				if (args.length !== 1) return await  client.sendMessage(from, mess.onoff(), id)
 				if (args[0] == 'on') {
-					if (atporn.includes(groupId)) return await kill.reply(from, mess.jaenabled(), id)
+					if (atporn.includes(groupId)) return await  client.sendMessage(from, mess.jaenabled(), id)
 					atporn.push(groupId)
 					await fs.writeFileSync('./database/json/antiporn.json', JSON.stringify(atporn))
-					await kill.reply(from, mess.enabled(), id)
+					await  client.sendMessage(from, mess.enabled(), id)
 				} else if (args[0] == 'off') {
 					if (!atporn.includes(groupId)) return await kill.reply(from, mess.jadisabled(), id)
 					atporn.splice(groupId, 1)
 					await fs.writeFileSync('./database/json/antiporn.json', JSON.stringify(atporn))
-					await kill.reply(from, mess.disabled(), id)
-				} else return await kill.reply(from, mess.kldica1(), id)
+					await  client.sendMessage(from, mess.disabled(), id)
+				} else return await  client.sendMessage(from, mess.kldica1(), id)
 			} else if (isGroup) {
-				await kill.reply(from, mess.soademiro(), id)
-			} else return await kill.reply(from, mess.sogrupo(), id)
+				await  client.sendMessage(from, mess.soademiro(), id)
+			} else return await  client.sendMessage(from, mess.sogrupo(), id)
             break
 			
 		case 'amor':
