@@ -1198,23 +1198,15 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break  
-			
-
-	
-
-	
-
-	
-case 'bateria':
-                const battery = await sexo.getBatteryLevel()
-                const isCharging = await sexo.getIsPlugged()
-                const timestamp = speed();
-                const latensi = speed() - timestamp
-                client.sendMessage(from, `*「 CELULAR DO BOT 」*\n${(`\n*Bateria*: ${battery}% ${isCharging ? 'Na Tomada...' : 'Fora da tomada...'}`)}\n\n*Speed:* ${latensi.toFixed(4)} _Segundos_`, id)
-break
-	
-
-	
+			case 'roubar':
+			if (quotedMsg && quotedMsg.type == 'sticker' && arks.includes('|')) {
+				await client.sendMessage(from, mess.wait(), id)
+				const stickerMeta = await decryptMedia(quotedMsg)
+				const packName = arg.split('|')[0]
+				const authorName = arg.split('|')[1]
+				await client.sendImageAsSticker(from, `data:${quotedMsg.mimetype};base64,${stickerMeta.toString('base64')}`, { author: authorName, pack: packName })
+			} else return await client.sendMessage(from, mess.onlyst() + '\n\n' + mess.argsbar() + 'use 1 "|".', id)
+            break
 
 	
 					   case 'antiporn':
@@ -1227,7 +1219,15 @@ break
 					await  client.sendMessage(from, mess.enabled(), id)
 				} else if (args[0] == 'off') {
 					if (!atporn.includes(groupId)) return await kill.reply(from, mess.jadisabled(), id)
-					atporn.splice(groupId, 1)
+	case 'roubar':
+			if (quotedMsg && quotedMsg.type == 'sticker' && arks.includes('|')) {
+				await kill.reply(from, mess.wait(), id)
+				const stickerMeta = await decryptMedia(quotedMsg)
+				const packName = arg.split('|')[0]
+				const authorName = arg.split('|')[1]
+				await kill.sendImageAsSticker(from, `data:${quotedMsg.mimetype};base64,${stickerMeta.toString('base64')}`, { author: authorName, pack: packName })
+			} else return await kill.reply(from, mess.onlyst() + '\n\n' + mess.argsbar() + 'use 1 "|".', id)
+            break				atporn.splice(groupId, 1)
 					await fs.writeFileSync('./database/json/antiporn.json', JSON.stringify(atporn))
 					await  client.sendMessage(from, mess.disabled(), id)
 				} else return await  client.sendMessage(from, mess.kldica1(), id)
