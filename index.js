@@ -1219,15 +1219,7 @@ if (text.includes("placa"))
 					await  client.sendMessage(from, mess.enabled(), id)
 				} else if (args[0] == 'off') {
 					if (!atporn.includes(groupId)) return await kill.reply(from, mess.jadisabled(), id)
-	case 'roubar':
-			if (quotedMsg && quotedMsg.type == 'sticker' && arks.includes('|')) {
-				await kill.reply(from, mess.wait(), id)
-				const stickerMeta = await decryptMedia(quotedMsg)
-				const packName = arg.split('|')[0]
-				const authorName = arg.split('|')[1]
-				await kill.sendImageAsSticker(from, `data:${quotedMsg.mimetype};base64,${stickerMeta.toString('base64')}`, { author: authorName, pack: packName })
-			} else return await kill.reply(from, mess.onlyst() + '\n\n' + mess.argsbar() + 'use 1 "|".', id)
-            break				atporn.splice(groupId, 1)
+					atporn.splice(groupId, 1)
 					await fs.writeFileSync('./database/json/antiporn.json', JSON.stringify(atporn))
 					await  client.sendMessage(from, mess.disabled(), id)
 				} else return await  client.sendMessage(from, mess.kldica1(), id)
