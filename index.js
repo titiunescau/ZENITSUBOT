@@ -1098,6 +1098,14 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/taporra.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
+    } 
+			if (messagesC.includes("baile1")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/baile1.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/baile01.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
     }
           if (messagesC.includes("kkkkkk")){
 			client.updatePresence(from, Presence.composing) 
@@ -1198,25 +1206,7 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break  
-		 case 'autosticker':
-			if (!isGroup) return await sexo.reply(from, mess.sogrupo(), id)
-			if (isGroup && isGroupAdmins || isGroup && isOwner) {
-				if (args.length !== 1) return await sexo.reply(from, mess.onoff(), id)
-				if (args[0] == 'on') {
-					if (atstk.includes(groupId)) return await sexo.reply(from, mess.jaenabled(), id)
-					atstk.push(groupId)
-					await fs.writeFileSync('./database/json/sticker.json', JSON.stringify(atstk))
-					await sexo.reply(from, mess.enabled(), id)
-				} else if (args[0] == 'off') {
-					if (!atstk.includes(groupId)) return await kill.reply(from, mess.jadisabled(), id)
-					atstk.splice(groupId, 1)
-					await fs.writeFileSync('./database/json/sticker.json', JSON.stringify(atstk))
-					await sexo.reply(from, mess.disabled(), id)
-				} else return await sexo.reply(from, mess.kldica1(), id)
-			} else if (isGroup) {
-				await sexo.reply(from, mess.soademiro(), id)
-			} else return await sexo.reply(from, mess.sogrupo(), id)
-            break
+		 
 			
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
@@ -2666,6 +2656,10 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break 
+case 'baile1':
+tujuh = fs.readFileSync('./assets/baile1.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break				
 case 'beggin':
 tujuh = fs.readFileSync('./assets/beggin.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
