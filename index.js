@@ -1202,7 +1202,7 @@ if (text.includes("placa"))
 			if (args.length == 0) return await kill.reply(from, mess.noargs() + 'palavras/words/números/numbers.', id)
 			try {
 				if (arks.length >= 16) return await kill.reply(from, 'Max: 10 letras/letters.', id)
-				await kill.reply(from, mess.wait() + '\n\n20+ s.', id)
+				await client.reply(from, mess.wait() + '\n\n20+ s.', id)
 				const browser = await puppeteer.launch(options)
 				const page = await browser.newPage()
 				await page.goto("https://textpro.me/dropwater-text-effect-872.html", { waitUntil: "networkidle2", timeout: 0 }).then(async () => {
@@ -1212,7 +1212,7 @@ if (text.includes("placa"))
 					await sleep(10000) // Aumente se sua conexão for superr lenta
 					await page.waitForSelector('div[class="thumbnail"] > img')
 					const divElement = await page.$eval('div[class="thumbnail"] > img', txLogo => txLogo.src)
-					await kill.sendFileFromUrl(from, divElement, 'neon.jpg', '', id)
+					await client.sendFileFromUrl(from, divElement, 'neon.jpg', '', id)
 					await browser.close()
 				
 		case 'amor':
