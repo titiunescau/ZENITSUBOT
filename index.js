@@ -1208,15 +1208,22 @@ if (text.includes("placa"))
                   break  
 		 
 			case 'light':
-                      if (args.length < 1) return reply('Cadê o texto?')
-                      gh = body.slice(9)
-                      gl1 = gh.split("|")[0];
-                      gl2 = gh.split("|")[1];
-                      reply(mess.wait)
-                      anu = await fetchJson(`https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html=${gl1}&text2=${gl2}`, {method: 'get'})
-                      buff = await getBuffer(anu.result)
-                      client.sendMessage(from, buff, image, {quoted: mek})
-                      break
+			if (args.length == 0) return await kill.reply(from, mess.noargs() + 'palavras/words/números/numbers.', id)
+			if (arks.length >= 16) return await kill.reply(from, 'Max: 10 letras/letters.', id)
+			await kill.reply(from, mess.wait() + '\n\n20+ s.', id)
+			const browserlg = await puppeteer.launch(options)
+			const pagelg = await browserlg.newPage()
+			await pagelg.goto("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", { waitUntil: "networkidle2", timeout: 0 }).then(async () => {
+				await pagelg.waitForSelector('#text-0')
+				await pagelg.type("#text-0", body.slice(7))
+				await pagelg.click("#submit")
+				await sleep(10000) // Aumente se sua conexão for superr lenta
+				await pagelg.waitForSelector('div[class="thumbnail"] > img')
+				const divElement = await pagelg.$eval('div[class="thumbnail"] > img', txLogo => txLogo.src)
+				await kill.sendFileFromUrl(from, divElement, 'light.jpg', '', id)
+				await browserlg.close()
+			})
+			break
 					
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
