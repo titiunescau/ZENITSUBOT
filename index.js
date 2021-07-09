@@ -1214,6 +1214,7 @@ if (text.includes("placa"))
 					const divElement = await page.$eval('div[class="thumbnail"] > img', txLogo => txLogo.src)
 					await client.sendFileFromUrl(from, divElement, 'neon.jpg', '', id)
 					await browser.close()
+				break
 				
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
