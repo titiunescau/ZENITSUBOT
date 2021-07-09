@@ -1206,25 +1206,22 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break  
-		 
-			case 'light':
-			if (args.length == 0) return await client.reply(from, mess.noargs() + 'palavras/words/números/numbers.', id)
-			if (arks.length >= 16) return await client.reply(from, 'Max: 10 letras/letters.', id)
-			await client.reply(from, mess.wait() + '\n\n20+ s.', id)
-			const browserlg = await puppeteer.launch(options)
-			const pagelg = await browserlg.newPage()
-			await pagelg.goto("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html", { waitUntil: "networkidle2", timeout: 0 }).then(async () => {
-				await pagelg.waitForSelector('#text-0')
-				await pagelg.type("#text-0", body.slice(7))
-				await pagelg.click("#submit")
-				await sleep(10000) // Aumente se sua conexão for superr lenta
-				await pagelg.waitForSelector('div[class="thumbnail"] > img')
-				const divElement = await pagelg.$eval('div[class="thumbnail"] > img', txLogo => txLogo.src)
-				await client.sendFileFromUrl(from, divElement, 'light.jpg', '', id)
-				await browserlg.close()
-			})
-			break
-					
+		 case 'herrypotter':
+                                case 'harrypotter':
+                                        var gh = body.slice(12)
+                                        if (args.length < 1) return reply(`onde está o texto hum\nExemplo: ${prefix}harrypotter ZenitsuBOT`)
+                                        if (!isUser) return reply(mess.only.daftarB)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=harry_potter&text=${gh}&apikey=BotWeA`, {method: 'get'})
+                                        buffer = await getBuffer(anu.result)
+                                        client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak gambarnya...'})
+                                        break	
+					case 'bpink':
+              
+                  if (args.length < 1) return reply(`Texto de entrada \nExemplo : ${prefix}Zenitsu Bot`)
+                data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
+                if (!iUser) return reply(mess.only.daftarB)
+                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
+                break
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
 				mentidn = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
