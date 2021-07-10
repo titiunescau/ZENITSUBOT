@@ -2695,7 +2695,7 @@ tujuh = fs.readFileSync('./assets/baile5.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break	
 case 'baile6':
-tujuh = fs.readFileSync('./assets/baile.mp3');
+tujuh = fs.readFileSync('./assets/baile6.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break	
 case 'beggin':
