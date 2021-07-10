@@ -2,7 +2,7 @@
 	<img src="./image/xandao.png">
 	<img src="./image/xandao2.png">
 </p>
-<h1>Super ⚡NEZUKO BOT⚡ e um Bot de whatsapp feito com a base de um dos meu YouTubers favoritos *Causs*</h1>
+<h1>Super ⚡ZENITSUBOT⚡ e um Bot de whatsapp feito com a base de um dos meu YouTubers favoritos *Causs*</h1>
 <p>https://youtube.com/CaussZ</p>
 
 Comandos pra instalar:
@@ -21,9 +21,9 @@ Comandos pra instalar:
 
 * `pkg install nodejs `
 
-* `git clone https://github.com/Meliodas-rai/Bot `
+* `git clone https://github.com/titiunescau/ZENITSUBOT `
 
-* `cd Bot `
+* `cd ZENITSUBOT `
 
 * `bash install.sh `
 
@@ -45,7 +45,7 @@ Comandos pra instalar:
 
 ## Comandos para ligar o bot novamente
 
-* `cd Bot`
+* `cd ZENITSUBOT`
 
 * `git pull `
 
@@ -63,4 +63,4 @@ Comandos pra instalar:
 
 * OBS: o bot só pode ser instalador em celulares com o androind acima de 4.0 ou 5.0
 
-<h3 align="center">⚡SUPER XANDÃO⚡</h3>
+<h3 align="center">⚡ZENITSUBOT⚡</h3>
