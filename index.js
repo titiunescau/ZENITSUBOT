@@ -32,6 +32,7 @@ const { recognize } = require('./lib/ocr')
 const fs = require('fs')
 const anime = JSON.parse(fs.readFileSync('./database/json/anime.json'))
 const antishit = JSON.parse(fs.readFileSync('./database/json/antishit.json'))
+const modopaulista = JSON.parse(fs.readFileSync('./database/json/modopaulista.json'))
 const antiracismo = JSON.parse(fs.readFileSync('./database/json/antiracismo.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const moment = require('moment-timezone')
@@ -393,6 +394,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
+		const isModoPaulista = isGroup ? modopaulista.includes(from) : false
 		const isAntiShit = isGroup ? antishit.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
@@ -498,6 +500,43 @@ if (text.includes("placa"))
   conn.sendMessage(id, hasil, MessageType.text); 
  })
  }		        
+			if (messagesC.includes("baile1")){
+		if (!isGroup) return
+		if (!isModoPaulista) return
+		if (isGroup) return reply('Pega la o lança que hj tem!')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`Sinta a pressão ${sender.split("@")[0]} `)
+		setTimeout( () => {
+			client.groupsendMessage(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("E o bot né vida")
+		}, 4000)
+		setTimeout( () => {
+			client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+		tujuh = fs.readFileSync('./assets/baile1.mp3');
+
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing) 
+	         	const e = fs.readFileSync('./sticker/baile01.webp');
+                        client.sendMessage(from, e, sticker, {quoted: mek})
+			
+		}, 2000)
+		setTimeout( () => {
+				client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/baile1.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("testesexo123")
+		}, 0)
+	}   
+		        
 			if (messagesC.includes("krlh")){
 		if (!isGroup) return
 		if (!isAntiShit) return
