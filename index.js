@@ -1210,7 +1210,7 @@ if (text.includes("placa"))
                                 case 'harrypotter':
                                         var gh = body.slice(12)
                                         if (args.length < 1) return reply(`onde está o texto hum\nExemplo: ${prefix}harrypotter ZenitsuBOT`)
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                        if (!isGroup)return reply(mess.only.group)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/photooxy?theme=harry_potter&text=${gh}&apikey=BotWeA`, {method: 'get'})
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak gambarnya...'})
