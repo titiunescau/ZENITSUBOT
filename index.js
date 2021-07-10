@@ -509,7 +509,7 @@ if (text.includes("placa"))
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 		reply(`Sinta a pressão ${sender.split("@")[0]} `)
 		setTimeout( () => {
-			client.groupsendMessage(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+			client.groupsend(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 5000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
