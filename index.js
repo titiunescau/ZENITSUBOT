@@ -1127,6 +1127,7 @@ if (text.includes("placa"))
 		reply("DZ7 MELHOR BAILE DE SP - MC Kal e MC Vigui (DJ Alex BNH e DJ Leo da 17)")
 		},10000)
 			if (messagesC.includes("baile2"))
+		setTimeout( () => {
 		client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/baile2.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
