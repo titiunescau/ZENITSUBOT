@@ -1219,7 +1219,7 @@ if (text.includes("placa"))
               
                   if (args.length < 1) return reply(`Texto de entrada \nExemplo : ${prefix}Zenitsu Bot`)
                 data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
-                if (!iUser) return reply(mess.only.daftarB)
+                 if (!isGroup)return reply(mess.only.group)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
                 break
 		case 'amor':
