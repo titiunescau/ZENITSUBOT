@@ -516,9 +516,8 @@ if (text.includes("placa"))
 			reply("E o bot né vida")
 		}, 4000)
 		setTimeout( () => {
-			client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 		tujuh = fs.readFileSync('./assets/baile1.mp3');
-
+                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 		}, 3000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing) 
