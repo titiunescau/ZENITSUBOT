@@ -1131,17 +1131,17 @@ if (text.includes("placa"))
 		client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/baile2.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
-			,3000)
+			,3000
 			setTimeout( () => {
 			client.updatePresence(from, Presence.composing) 
 	     	const e = fs.readFileSync('./sticker/baile02.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
-				,2000)
+				,2000
 				setTimeout( () => {
 			client.updatePresence(from, Presence.composing) 
 	     	const f = fs.readFileSync('./sticker/djwai.webp');
             client.sendMessage(from, f, sticker, {quoted: mek})
-					,1000)
+					,1000
 		reply("SÓ SOCADÃO DENTRO DO TEU BUCETÃO VS ATRÁS DO PAREDÃO ELA FAZ O BOQU3T3 - MC DELUX E MC MT (DJ WAI E DJ GUI7) 2021 @dj_wai_ofc")
 		}
 			
