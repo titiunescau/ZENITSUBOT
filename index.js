@@ -1141,9 +1141,8 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing) 
 	     	const f = fs.readFileSync('./sticker/djwai.webp');
             client.sendMessage(from, f, sticker, {quoted: mek})
-					,1000
 		reply("SÓ SOCADÃO DENTRO DO TEU BUCETÃO VS ATRÁS DO PAREDÃO ELA FAZ O BOQU3T3 - MC DELUX E MC MT (DJ WAI E DJ GUI7) 2021 @dj_wai_ofc")
-		}
+		,1000
 			
 if (messagesC.includes("baile3"))
 		setTimeout( () => {
