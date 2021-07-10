@@ -401,6 +401,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 			const errorurl2 = 'https://i.ibb.co/dttZM8b/591530180aad.png'
 			const isadminbot = adminbotnumber.includes(sender)
 			const isfrendsowner = frendsowner.includes(sender)
+			const isUser = user.includes(sender)
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
 			}
