@@ -1118,14 +1118,14 @@ if (text.includes("placa"))
     }
 			if (messagesC.includes("baile1"))
 		setTimeout( () => {
-				,1000
 		client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/baile1.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
 	     	const e = fs.readFileSync('./sticker/baile01.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
-    },0)
+    },1000)
+		}
 
           if (messagesC.includes("eita")){
 			client.updatePresence(from, Presence.composing) 
