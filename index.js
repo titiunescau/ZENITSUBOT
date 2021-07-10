@@ -1138,14 +1138,7 @@ if (text.includes("placa"))
 	     	const d = fs.readFileSync('./sticker/taporra.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     } 
-			if (messagesC.includes("baile1")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/baile1.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-			client.updatePresence(from, Presence.composing) 
-	     	const e = fs.readFileSync('./sticker/baile01.webp');
-            client.sendMessage(from, e, sticker, {quoted: mek})
-    }
+
           if (messagesC.includes("kkkkkk")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/kkk.webp');
@@ -2106,7 +2099,23 @@ break
 						reply('On para ativar, Off para desligar')
 					}
 					break 
-					
+					case 'modopaulista':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroup) return reply(mess.only.group)
+					if (args.length < 1) return reply('Hmmmm')
+					if ((args[0]) === 'on') {
+						if (isModoPaulista) return reply('O modo paulista já está ativo')
+						modopaulista.push(from)
+						fs.writeFileSync('./database/json/modopaulista.json', JSON.stringify(modopaulista))
+						reply(`\`\`\`✓Ativado com sucesso o modo paulista no grupo\`\`\` *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
+						modopaulista.splice(from, 1)
+						fs.writeFileSync('./database/json/modopaulista.json', JSON.stringify(modopaulista))
+						reply(`\`\`\`✓Modo paulista desativado com sucesso no grupo😡\`\`\` *${groupMetadata.subject}*`)
+					} else {
+						reply('On para ativar, Off para desligar')
+					}
+					break 
 				case 'modonsfw':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -2709,10 +2718,7 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break 
-case 'baile1':
-tujuh = fs.readFileSync('./assets/baile1.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break				
+				
 case 'beggin':
 tujuh = fs.readFileSync('./assets/beggin.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
