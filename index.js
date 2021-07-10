@@ -2673,7 +2673,7 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break 
-	case 'baie1':
+	case 'baile1':
 tujuh = fs.readFileSync('./assets/baile1.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break			
