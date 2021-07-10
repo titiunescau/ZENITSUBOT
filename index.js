@@ -1125,7 +1125,8 @@ if (text.includes("placa"))
 	     	const e = fs.readFileSync('./sticker/baile01.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			
-    }reply("sexo123")
+    }
+			   reply("sexo123")
 			,10000)
 
           if (messagesC.includes("eita")){
