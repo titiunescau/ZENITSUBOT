@@ -1127,18 +1127,22 @@ if (text.includes("placa"))
 		reply("DZ7 MELHOR BAILE DE SP - MC Kal e MC Vigui (DJ Alex BNH e DJ Leo da 17)")
 		},10000)
 			if (messagesC.includes("baile2"))
-		setTimeout( () => {
 		client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/baile2.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
+			,3000)
+			setTimeout( () => {
 			client.updatePresence(from, Presence.composing) 
 	     	const e = fs.readFileSync('./sticker/baile02.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
+				,2000)
+				setTimeout( () => {
 			client.updatePresence(from, Presence.composing) 
 	     	const f = fs.readFileSync('./sticker/djwai.webp');
             client.sendMessage(from, f, sticker, {quoted: mek})
+					,1000)
 		reply("SÓ SOCADÃO DENTRO DO TEU BUCETÃO VS ATRÁS DO PAREDÃO ELA FAZ O BOQU3T3 - MC DELUX E MC MT (DJ WAI E DJ GUI7) 2021 @dj_wai_ofc")
-		},20000)
+		}
 			
 if (messagesC.includes("baile3"))
 		setTimeout( () => {
