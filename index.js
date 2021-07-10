@@ -1124,6 +1124,7 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing) 
 	     	const e = fs.readFileSync('./sticker/baile01.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
+		reply("sexo")
 		},10000)
 
           if (messagesC.includes("eita")){
@@ -2673,10 +2674,30 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break 
-	case 'baile1':
+case 'baile1':
 tujuh = fs.readFileSync('./assets/baile1.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break	
+case 'baile2':
+tujuh = fs.readFileSync('./assets/baile2.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break			
+case 'baile3':
+tujuh = fs.readFileSync('./assets/baile3.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break					
+case 'baile4':
+tujuh = fs.readFileSync('./assets/baile4.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break			
+case 'baile5':
+tujuh = fs.readFileSync('./assets/baile5.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break	
+case 'baile6':
+tujuh = fs.readFileSync('./assets/baile.mp3');
+client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break	
 case 'beggin':
 tujuh = fs.readFileSync('./assets/beggin.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
