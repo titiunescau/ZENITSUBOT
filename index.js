@@ -1122,7 +1122,7 @@ if (text.includes("placa"))
             client.sendMessage(from, d, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
 	     	const e = fs.readFileSync('./sticker/baile01.webp');
-            client.sendMessage(from, e, sticker, {quoted: mek}),{  1000)
+            client.sendMessage(from, e, sticker, {quoted: mek}),[(  1000)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
 		}, 0)
