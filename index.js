@@ -1116,9 +1116,10 @@ if (text.includes("placa"))
 	     	const d = fs.readFileSync('./sticker/gostoso.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
-			if (messagesC.includes("baile1"))1000)
+			if (messagesC.includes("baile1"))
 		setTimeout( () => {
-			client.updatePresence(from, Presence.composing) 
+				,1000
+		client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/baile1.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
