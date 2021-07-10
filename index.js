@@ -1135,8 +1135,8 @@ if (text.includes("placa"))
 	     	const e = fs.readFileSync('./sticker/baile02.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/djwai.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
+	     	const f = fs.readFileSync('./sticker/djwai.webp');
+            client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("SÓ SOCADÃO DENTRO DO TEU BUCETÃO VS ATRÁS DO PAREDÃO ELA FAZ O BOQU3T3 - MC DELUX E MC MT (DJ WAI E DJ GUI7) 2021 @dj_wai_ofc")
 		},10000)
 			
@@ -1149,8 +1149,8 @@ if (messagesC.includes("baile3"))
 	     	const e = fs.readFileSync('./sticker/baile03.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/djwai.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
+	     	const f = fs.readFileSync('./sticker/djwai.webp');
+            client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("BRUXARIA HARMÔNICA - MC'S PIKACHU, GW E MORENA (DJ WAI)2032 @dj_wai_ofc")
 		},10000)
 			
@@ -1163,8 +1163,8 @@ if (messagesC.includes("baile3"))
 	     	const e = fs.readFileSync('./sticker/baile04.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/djwai.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
+	     	const f = fs.readFileSync('./sticker/djwai.webp');
+            client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("MONTAGEM - ARREBENTA PAREDÃO - MC LIPEX (DJ WAI E DJ GF7) 2K21 @dj_wai_ofc")
 		},10000)
 			if (messagesC.includes("baile5"))
@@ -1176,8 +1176,8 @@ if (messagesC.includes("baile3"))
 	     	const e = fs.readFileSync('./sticker/baile05.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/djwai.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
+	     	const f = fs.readFileSync('./sticker/djwai.webp');
+            client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("BOTA POR CIMA DO P4U - MC GW (DJ WAI E DJ VH7) 2K21 🇷🇺 @dj_wai_ofc")
 		},10000)
 			if (messagesC.includes("baile6"))
@@ -1189,8 +1189,8 @@ if (messagesC.includes("baile3"))
 	     	const e = fs.readFileSync('./sticker/baile06.webp');
             client.sendMessage(from, e, sticker, {quoted: mek})
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/djwai.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
+	     	const f = fs.readFileSync('./sticker/djwai.webp');
+            client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("*BRUXARIA HARMÔNICA 2.0 - MC'S MAGRINHO, NEM JM E RD (DJ WAI) 2033")
 		},10000)
           if (messagesC.includes("eita")){
