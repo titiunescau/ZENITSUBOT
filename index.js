@@ -2478,11 +2478,11 @@ break
 					for (let V of premium) {
 						teks += `│+  @${V.split('@')[0]}\n`
 					}
-					teks += `│+ Total : ${premium.length}\n╰──────*「 *⚡NEZUKO BOT ⚡* 」*────`
+					teks += `│+ Total : ${premium.length}\n╰──────*「 *⚡ZENITSU BOT ⚡* 」*────`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": premium}})
 					break
                   case 'qrcode':
-        			if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
+        			if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite **Daftarvip* para adquirir o acesso Premium!' ,text, { quoted: mek })
 					const tex = encodeURIComponent(body.slice(8))
 					if (!tex) return client.sendMessage(from, 'Digite um texto/url que deseja criar um código qr', text, {quoted: mek})
 					const bufferr = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${tex}`)
