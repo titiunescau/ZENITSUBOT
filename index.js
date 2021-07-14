@@ -1287,7 +1287,20 @@ if (text.includes("placa"))
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
-					break
+					break 
+				case 'attp3': 	
+
+if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
+
+teks = body.slice(6)
+
+url = encodeURI(`http://brizas-api.herokuapp.com/ttp/attp3?apikey=brizaloka&text=${teks}`)
+
+send = await getBuffer(url)
+
+client.sendMessage(from, send, sticker, {quoted: mek})
+
+			     	break	
 					
 					case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
