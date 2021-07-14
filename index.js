@@ -1101,11 +1101,11 @@ if (text.includes("placa"))
             client.sendMessage(from, d, sticker, {quoted: mek})
     } 
 
-          if (messagesC.includes("kkkkkk")){
+          /*if (messagesC.includes("kkkkkk")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/kkk.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
-    }
+    }*/
           if (messagesC.includes("vida")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./sticker/vida.webp');
@@ -1139,7 +1139,7 @@ if (text.includes("placa"))
 	     	const f = fs.readFileSync('./sticker/djwai.webp');
             client.sendMessage(from, f, sticker, {quoted: mek})
 		reply("SÓ SOCADÃO DENTRO DO TEU BUCETÃO VS ATRÁS DO PAREDÃO ELA FAZ O BOQU3T3 - MC DELUX E MC MT (DJ WAI E DJ GUI7) 2021 @dj_wai_ofc")
-		},10000)
+		},1000)
 			
            if (messagesC.includes("baile3"))
 		setTimeout( () => {
@@ -1230,7 +1230,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 			
-			if (messagesC.includes("gemidinho")){
+			if (messagesC.includes("geme")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/fodaze.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1277,6 +1277,35 @@ if (text.includes("placa"))
                 const nescau = await getBuffer(getFoto)
                 client.sendMessage(from, nescau, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "⚡Zenitsu⚡", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./sticker/kkk.webp')} } }, caption: help(prefix, sender, pushname, time)})
                   break  
+					case 'ytmp4':
+					if (args.length < 1) return reply('Onde está o url, hum?')
+					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
+					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					teks = `*❏ Title* : ${anu.title}\n\n*VIDEO SEDANG DIKIRIMKAN, JANGAN SPAM YA SAYANG*`
+					thumb = await getBuffer(anu.thumb)
+					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
+					break
+					
+					case 'tomp3':
+                	client.updatePresence(from, Presence.composing) 
+                        if (!isUser) return reply(mess.only.daftarB)
+					if (!isQuotedVideo) return reply('❌ responder vídeo hum ❌')
+					reply(mess.wait)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await client.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp4')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('❌ Falha ao converter vídeo para mp3 ❌')
+						buffer = fs.readFileSync(ran)
+						client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
+						fs.unlinkSync(ran)
+					})
+					break
+
 		 case 'herrypotter':
                                 case 'harrypotter':
                                         var gh = body.slice(12)
@@ -1290,6 +1319,13 @@ if (text.includes("placa"))
               
                   if (args.length < 1) return reply(`Texto de entrada \nExemplo : ${prefix}Zenitsu Bot`)
                 data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
+                 if (!isGroup)return reply(mess.only.group)
+                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
+                break
+					case 'vidro':
+              
+                  if (args.length < 1) return reply(`Texto de entrada \nExemplo : ${prefix}Zenitsu Bot`)
+                data = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/wetglass?apikey=262e2fbd14936af12d5307&text=${body.slice(7)}`)
                  if (!isGroup)return reply(mess.only.group)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
                 break
@@ -1841,17 +1877,7 @@ break
                     if (!isPremium) return reply(mess.only.premium)
                     client.sendMessage(from, gcpf(prefix), text, { quoted: mek })
                     break
-				case 'ytmp4':
-					if (args.length < 1) return reply('Cadê o url vey?')
-					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*Titulo* : ${anu.title}`
-					thumb = await getBuffer(anu.thumb)
-					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
-					break
+				
 		case 'iri':
 			client.sendPtt(from, './lindy/iri.mp3', {quoted: mek, ptt:true})
 			break
@@ -2169,7 +2195,7 @@ break
 					tels = body.slice(7)
 					if (tels.length > 15) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
-					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tfire?text=${tels}&apikey=xptnbot352`, {method: 'get'})
+					anu = await fetchJson(`https://kocakz.herokuapp.com/api/flamingtext/water?text=${tels}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
@@ -2296,7 +2322,7 @@ break
 					tels = body.slice(7)
 					if (tels.ength > 10) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tlight?text=${tels}&apikey=xptnbot352`, {method: 'get'})
+					anu = await fetchJson(`&apikey=xptnbot352`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2331,7 +2357,7 @@ break
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
 					case 'vipmenu':
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *#daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite **daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
 					client.sendMessage(from, vipmenu(prefix) , text, { quoted: mek })
 					break
 					case 'outros':
@@ -3455,7 +3481,7 @@ break
 					const userXp = getLevelingXp(sender)
 					if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
 					sem = sender.replace('@s.whatsapp.net','')
-					resul = `┏━━❉ *LEVEL* ❉━━\n┣⊱ Nome : ${sem}\n┣⊱ Seu XP :  ${userXp}\n┣⊱ Seu Level : ${userLevel}\n┗━━━━━━━━━━━━`
+					resul = `┏━━❉ *LEVEL* ❉━━\n┣⊱ Nick : ${sem}\n┣⊱ Seu XP :  ${userXp}\n┣⊱ Seu Level : ${userLevel}\n┗━━━━━━━━━━━━`
 					client.sendMessage(from, resul, text, { quoted: mek})
 					.catch(async (err) => {
                     console.error(err)
