@@ -359,7 +359,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 				},
 				only: {
 					group: 'Este comando so pode ser usado nos grupos amigos',
-					premium: `Ei {pushname2} Só usuarios PREMIUMS podem usar este comando*`,
+					premium: `Ei {pushname} Só usuarios PREMIUMS podem usar este comando*`,
 					mod: 'ESTE PEDIDO É ESPECÍFICO PARA O MODERADOR DO ⚡Zenitsu BOT ⚡*',
 					benned: 'Você foi banido, contate o dono para te desbanir',
 					ownerG: 'Só o Titiu Nescau  pode usar esse comando bb',
@@ -375,7 +375,7 @@ Bem Vindo Ao Grupo! Olhe As Regras Do grupo Para Não Ser Banido
 			const mod = [ownerNumber,"559887053394@s.whatsapp.net"]// Moderador do bot
 			const adminbotnumber = ["559887053394@s.whatsapp.net"]// Número adm do bot
 			const frendsowner = ["559887053394@s.whatsapp.net"]// Amigo do criador 
-			const premium = ["559887053394@s.whatsapp.net","5514669262192@s.whatsapp.net"]
+			const premium = ["559887053394@s.whatsapp.net","5514669262192@s.whatsapp.net","553899403087@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -1236,7 +1236,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-			if (messagesC.includes("bv")){
+			if (messagesC.includes("bemvindo")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/bv.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1287,20 +1287,7 @@ if (text.includes("placa"))
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
-					break 
-				case 'attp3': 	
-
-if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
-
-teks = body.slice(6)
-
-url = encodeURI(`http://brizas-api.herokuapp.com/ttp/attp3?apikey=brizaloka&text=${teks}`)
-
-send = await getBuffer(url)
-
-client.sendMessage(from, send, sticker, {quoted: mek})
-
-			     	break	
+					break
 					
 					case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
@@ -1536,7 +1523,7 @@ break
 					
                 case 'eu':
                 putagg = await getBuffer(`https://i.ibb.co/TthtCSG/pakipariu-doido.jpg`)
-                client.sendMessage(from, putagg, buffer, {quoted: mek, caption: 'Vc'})
+                client.sendMessage(from, putagg, getBuffer, {quoted: mek, caption: 'Vc'})
                 break
                 case 'alist':
                     putagg = await getBuffer(`https://i.ibb.co/mt4FvHN/Animes.png`)
