@@ -24,9 +24,6 @@ const help = (prefix, sender, pushname, time) => {
 ┣⊱ Dono:                       
 │Titiu Nescau 
 │                                            
-┣⊱ Causs:         
-│https://wa.me/5547992091566
-│                                            
 ┣⊱ Nmr do Dono: 
 │wa.me/559887053394
 │                                            
@@ -47,7 +44,8 @@ const help = (prefix, sender, pushname, time) => {
 
 ╭────「 COMANDOS NOVOS 」
 │
-┣⊱  *baile1
+┣⊱  *vidro
+┣⊱  *baile1 ao 6
 ┣⊱  *bpink
 ┣⊱  *gados 
 ┣⊱  *antishit (on/off)
@@ -352,9 +350,7 @@ const help = (prefix, sender, pushname, time) => {
 │                                   
 ┣⊱Fxc7: Pesquise no YouTube          
 │                                   
-┣⊱Causs: youtube.com/CaussZ          
-│                                   
-┣⊱Darkkk: youtube.com/Darkkk         
+┣⊱Causs: youtube.com/CaussZ                  
 │                                   
 ╰─────────────────────────╯`
 function kyun(seconds){
