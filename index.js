@@ -1305,12 +1305,15 @@ if (text.includes("placa"))
 						fs.unlinkSync(ran)
 					})
 					break
-case 'bpink'
-                data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
-                 if (!isGroup)return reply(mess.only.group)
-                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
-                            break
-			    
+case 'bpink':
+					if (args.length < 1) return reply(mess.blank)
+					tels = body.slice(9)
+					if (tels.ength > 10) return reply('O texto é longo, até 9 caracteres')
+					reply(mess.wait)
+					anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/blackpink?text=${tels}`, {method: 'get'})
+					buff = await getBuffer(anu.result)
+					client.sendMessage(from, buff, image, {quoted: mek})
+					break
 		 case 'herrypotter':
                                 case 'harrypotter':
                                         var gh = body.slice(12)
