@@ -2190,15 +2190,7 @@ break
 					buffer = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: tels5})
 					break
-				case 'water':
-					if (args.length < 1) return reply(mess.blank)
-					cuu = body.slice(7)
-					if (cuu.length > 15) return reply('O texto é muito longo, até 20 caracteres')
-					reply(mess.wait)
-					anu = await fetchJson(`https://kocakz.herokuapp.com/api/flamingtext/water?text=${cuu}`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
-					break
+
                  case 'nomegp':
                  if (!isGroup) return reply(`Este comando só pode ser usado em grupos`)
 		             if (args.length < 1) return reply (`o nome do grupo é: *${groupName}*`)
