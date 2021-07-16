@@ -2192,10 +2192,10 @@ break
 					break
 				case 'water':
 					if (args.length < 1) return reply(mess.blank)
-					tels = body.slice(7)
-					if (tels.length > 15) return reply('O texto é muito longo, até 20 caracteres')
+					cuu = body.slice(7)
+					if (cuu.length > 15) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
-					anu = await fetchJson(`https://kocakz.herokuapp.com/api/flamingtext/water?text=${tels}`, {method: 'get'})
+					anu = await fetchJson(`https://kocakz.herokuapp.com/api/flamingtext/water?text=${cuu}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
