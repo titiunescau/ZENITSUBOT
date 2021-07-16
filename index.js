@@ -1320,14 +1320,7 @@ if (text.includes("placa"))
                 data = await getBuffer(`https://docs-jojo.herokuapp.com/api/blackpink?text=${body.slice(7)}`)
                  if (!isGroup)return reply(mess.only.group)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
-                break
-					case 'vidro':
-              
-                  if (args.length < 1) return reply(`Texto de entrada \nExemplo : ${prefix}Zenitsu Bot`)
-                data = await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/wetglass?apikey=262e2fbd14936af12d5307&text=${body.slice(7)}`)
-                 if (!isGroup)return reply(mess.only.group)
-                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
-                break
+                            break
 		case 'amor':
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marque a pessoa')
 				mentidn = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
