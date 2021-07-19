@@ -3866,7 +3866,6 @@ if (site.error) return reply(mess.error.play)
                 audiou = await getBuffer(site.result.url)
                 client.sendMessage(from, imagem, image, {quoted: mek, caption: resu})
                 client.sendMessage(from, audiou, audio, {mimetype:'audio/mp4',ptt:true})
-		await limiAdd(sender)
 					break
 				case 'miku':
 					reply(mess.wait)
