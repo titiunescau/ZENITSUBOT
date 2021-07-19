@@ -1298,7 +1298,6 @@ if (text.includes("placa"))
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                await limitAdd(sender)
                 break
 					case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
