@@ -3854,7 +3854,7 @@ break
 					case 'play':
 					  if (args.length < 1) return reply('Cadê o nome da música nenem?')
                 reply('🔎 Procurando música, aguarde...🔎')
-		const play = body.slice(6)
+		const play = body.slice(5)
                 site = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${args[0]}&apikey=apivinz`)
                  resu = `✅ 𝗠𝗨𝗦𝗜𝗖𝗔 𝗘𝗡𝗖𝗢𝗡𝗧𝗥𝗔𝗗𝗔 ✅\n\n𝗧𝗶́𝘁𝘂𝗹𝗼:\n${site.result.title}\n𝗩𝗶𝗲𝘄𝘀:\n${site.result.views}\n𝗟𝗶𝗻𝗸:\n${site.url}\n𝗕𝗮𝗶𝘅𝗮𝗻𝗱𝗼 𝗺𝘂́𝘀𝗶𝗰𝗮, 𝗮𝗴𝘂𝗮𝗿𝗱𝗲...\n\n•────•──────────•────•\n║▌│█║▌│ █║▌│█│║▌║
 ║▌│█║▌│ █║▌│█│║▌║
@@ -3864,8 +3864,9 @@ break
 if (site.error) return reply(mess.error.play)
                 imagem = await getBuffer(site.result.thumb)
                 audiou = await getBuffer(site.result.url)
-                client.sendMessage(from, imagem,image, {quoted: mek, caption: resu})
+                client.sendMessage(from, imagem, image, {quoted: mek, caption: resu})
                 client.sendMessage(from, audiou, audio, {mimetype:'audio/mp4',ptt:true})
+		await limiAdd(sender)
 					break
 				case 'miku':
 					reply(mess.wait)
