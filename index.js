@@ -1293,7 +1293,7 @@ if (text.includes("placa"))
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*MUSICA ENCONTRADA!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N SPAME O CHAT*`
+                 infomp3 = `*MUSICA ENCONTRADA AMIGO!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N FLODE MUITO O CHAT!!!*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
