@@ -1286,7 +1286,7 @@ if (text.includes("placa"))
                 break
 					case 'bugreport':
                      const bug = body.slice(5)
-                      if (pesan.length > 300) return client.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 letras', msgType.text, {quoted: mek})
+                      if (args.length > 300) return client.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 letras', msgType.text, {quoted: mek})
                         var nomor = mek.participant
                        teks1 = `*[RELATÓRIO]*\nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nmensagem : ${pesan}`
                       var options = {
@@ -1321,7 +1321,7 @@ if (text.includes("placa"))
                 break
 					case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
-                        if (!isGroup) return reply(mess.only.daftarB)
+                        if (!isGroup) return 
 					if (!isQuotedVideo) return reply('❌ responder vídeo hum ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
