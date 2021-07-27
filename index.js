@@ -1284,6 +1284,24 @@ if (text.includes("placa"))
                 if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite **daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(7)})
                 break
+					case 'bcgc':
+					client.updatePresence(from, Presence.composing) 
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('.......')
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						buff = await client.downloadMediaMessage(encmedia)
+						for (let _ of groupMembers) {
+							client.sendMessage(_.jid, buff, image, {caption: `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`})
+						}
+						reply('')
+					} else {
+						for (let _ of groupMembers) {
+							sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
+						}
+						reply('Grupo de transmissão de sucesso')
+					}
+					break
 					case 'ytmp4':
 					if (args.length < 1) return reply('Onde está o url, hum?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
