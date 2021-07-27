@@ -1288,7 +1288,7 @@ if (text.includes("placa"))
                      const bug = body.slice(5)
                       if (args.length > 300) return client.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 letras', msgType.text, {quoted: mek})
                         var nomor = mek.participant
-                       teks1 = `*[RELATÓRIO]*\nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nmensagem : ${args}`
+                       teks1 = `*[RELATÓRIO]*\nNúmero : @${num.split("@s.whatsapp.net")[0]}\nmensagem : ${args}`
                       var options = {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
