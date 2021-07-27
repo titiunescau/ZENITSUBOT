@@ -1288,12 +1288,12 @@ if (text.includes("placa"))
                      const bug = body.slice(5)
                       if (args.length > 300) return client.sendMessage(from, 'Desculpe, o texto é muito longo, máximo de 300 letras', msgType.text, {quoted: mek})
                         var nomor = mek.participant
-                       teks1 = `*[RELATÓRIO]*\nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nmensagem : ${pesan}`
+                       teks1 = `*[RELATÓRIO]*\nNúmero : @${nomor.split("@s.whatsapp.net")[0]}\nmensagem : ${args}`
                       var options = {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage(nomerOwner, options, text, {quoted: mek})
+                    client.sendMessage(ownerNumber, options, text, {quoted: mek})
                     reply('Problemas foram relatados ao proprietário do BOT, relatórios falsos não serão respondidos.')
                     break
 					
