@@ -3356,8 +3356,8 @@ break
                                         client.sendMessage(from, tag, text, {quoted: mek})
                                         break 
 				case 'indo10':
-					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite *.daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
-					qute9 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
+					if (!isPremium) return reply('Você não é um Membro Premium, entre em contato com o proprietário ou digite **daftarvip* para comprar acesso Premium!' ,text, { quoted: mek })
+					qute9 = await getBuffer(`https://i.ibb.co/VjKLX8b/th-1.png`)
 					client.sendMessage(from, qute9, image, { quoted: mek, caption: 'Aqui está o Bro Baixe o seu próprio link\n\nhttps://www.mediafire.com/file/snwja297dv4zvtl/VID-20210107-WA0036.mp4/file' })
 					break
 case 'iri':
